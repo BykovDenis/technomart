@@ -1,0 +1,20 @@
+{
+  "name": "flat-shoes",
+  "version": "0.0.1",
+  "description": "Flat shoes",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.3",
+    "grunt-concurrent": "^2.1.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-config": "^0.19.1"
+  },
+  "dependencies": {
+    "time-grunt": "^1.2.2"
+  }
+}
