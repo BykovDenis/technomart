@@ -75,7 +75,8 @@ body{
 
 .main-header{   
  
-    background-color: @color-yellow-light;    
+    background-color: @color-yellow-light;  
+    margin-bottom: 59px;
     
 }
 
@@ -338,6 +339,134 @@ body{
         text-decoration: none;
         
     }
+    
+}
+
+.top-block{
+    
+    font-size: 0;
+    
+    &__layout{
+        
+        .layout
+        
+    }
+    
+    &__col1{
+        
+        float: left;  
+        width: 610px;
+        
+    }
+    
+    &__col2{
+        
+        float:right;
+        width: 300px;
+        
+    }        
+            
+    
+}
+
+.banner-card-goods{
+    
+    display: inline-block;
+    vertical-align: top;
+    
+    width: 300px;
+    height: 123px;
+    
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+    font-size: 0;
+    color: @color-white;
+    
+    &__layout{
+       
+        margin: 0 43px 26px 25px;
+        padding: 0;
+        
+    }    
+    
+    &:last-of-type{
+        
+        margin-right:0;    
+        
+    } 
+
+    
+    &--yellow{
+        
+        background-color: @color-yellow1;        
+        
+    }
+    
+    &--blue{
+        
+        background-color: @color-blue-light; 
+        
+    }   
+    
+    &--pink{
+        
+        background-color: @color-pink; 
+        
+    }
+    
+    &--green{
+        
+        background-color: @color-green1; 
+        
+    }    
+    
+    &__content{
+        
+        float: left;
+        
+    }
+    
+    &__header{
+        
+        font: bold ((@font-size-base + 11px))/@line-height @font-family-cuprumbold;           
+        
+        margin-bottom: 15px;
+        
+    }    
+    
+    &__type{
+        
+        padding: 7px 0;
+        width: 135px;
+        
+        text-align: center;
+        
+        font: normal ((@font-size-base))/@line-height @font-family-cuprumregular;
+        text-transform: uppercase;
+        
+        background-color: rgba(0, 0, 0, .15); /* @color-brown; */
+        
+        border: 1px solid transparent;
+        border-radius: 5px;     
+        
+    }
+    
+    &__image{
+        
+        float: right;
+        display: block;
+        
+        padding-top: 27px;
+        padding-bottom: 31px;            
+        
+    }
+    
+}
+
+.slider{
+    
+    width: 610px;
     
 }
 
