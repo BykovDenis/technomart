@@ -271,6 +271,24 @@ body {
   padding-bottom: 31px;
 }
 .slider {
-  width: 610px;
+  width: 622px;
+  height: 266px;
+}
+.slider__layout {
+  padding: 0 25px;
+  position: relative;
+}
+.slider__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: #63a63e;
+  width: 622px;
+  height: 105px;
+  text-align: left;
+}
+.slider__header h4 {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=src/css/style.css.map */
