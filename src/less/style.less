@@ -27,6 +27,15 @@
     
 }
 
+@font-face{
+    
+    font-family: "PTSansRegular";
+    src: url("../fonts/PTSans-Regular.ttf");
+    font-weight: normal;   
+    font-style: normal;
+    
+}
+
 /*  ------------- */
 
 
@@ -65,6 +74,29 @@ body{
     
 }
 
+.icon-left,
+.icon-right{
+    
+    font-style: normal;
+    font-size: ((@font-size-base+ 22px));
+    line-height: ((@line-height - 6px));     
+    
+}
+
+
+.icon-left {
+
+   text-align: left;
+
+}
+    
+.icon-right {
+
+   text-align: right;
+
+}
+
+
 .clearfix:after{
     
     display: table;
@@ -92,6 +124,7 @@ body{
     }
     
 }
+
 
 .logo{
 
@@ -468,36 +501,64 @@ body{
     
     width: 622px;
     height: 266px;
+    position: relative;
+    z-index: -1;
+    
+    color: @color-white;
     
     &__layout{
                 
         padding: 0 25px;
-        position: relative;
+
         
     }
     
     &__header{
         
+        width: 622px;
+        
         position: absolute;
         top:0;
         left:0;
-        z-index: 100;
+        z-index: 1;
         
-        color: @color-green;
-        width: 622px;
-        height: 105px;
-        
-        text-align: left;
-        
-        
-        h4{
-            
-            text-transform: uppercase;
-            
-        }
+        background-color: rgba(0,0,0, 0.3);
+        padding: 25px 0 23px 0;
         
     }
     
+    &__control{   
+        
+        width: 622px;
+        
+        position: absolute;
+        top:50%;
+        left:0;
+        z-index: 1;
+        
+    }
+    
+    &__title{   
+        
+        position: relative;
+        z-index: 100;
+                
+        margin:0;
+                
+        text-align: left;
+        
+        text-transform: uppercase;
+        font: bold @font-size-h4 / ((@line-height + 9px)) @font-family-cuprumbold;         
+            
+    }
+    
+    &__content{
+        
+        font: normal ((@font-size-base + 5px)) / @line-height @font-family-ptsansregular;
+        margin: 0;
+        
+    } 
+
     
 }
 

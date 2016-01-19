@@ -21,6 +21,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "PTSansRegular";
+  src: url("../fonts/PTSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 /*  ------------- */
 body {
   width: 1200px;
@@ -38,6 +44,18 @@ body {
 .icon-login {
   opacity: .3;
   margin: 0;
+}
+.icon-left,
+.icon-right {
+  font-style: normal;
+  font-size: 35px;
+  line-height: 18px;
+}
+.icon-left {
+  text-align: left;
+}
+.icon-right {
+  text-align: right;
 }
 .clearfix:after {
   display: table;
@@ -273,22 +291,39 @@ body {
 .slider {
   width: 622px;
   height: 266px;
+  position: relative;
+  z-index: -1;
+  color: #ffffff;
 }
 .slider__layout {
   padding: 0 25px;
-  position: relative;
 }
 .slider__header {
+  width: 622px;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
-  color: #63a63e;
-  width: 622px;
-  height: 105px;
-  text-align: left;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 25px 0 23px 0;
 }
-.slider__header h4 {
+.slider__control {
+  width: 622px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+.slider__title {
+  position: relative;
+  z-index: 100;
+  margin: 0;
+  text-align: left;
   text-transform: uppercase;
+  font: bold 36px / 33px "CuprumBold", Arial, sans-serif;
+}
+.slider__content {
+  font: normal 18px / 24px "PTSansRegular", Arial, sans-serif;
+  margin: 0;
 }
 /*# sourceMappingURL=src/css/style.css.map */
