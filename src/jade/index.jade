@@ -4,8 +4,9 @@ html
         meta(charset="utf-8")
         title Техномарт
         link(href="css/normalize.css" rel="stylesheet")
+        link(href="css/symbols-technomart.css" rel="stylesheet")            
         link(href="css/style.css" rel="stylesheet")
-        link(href="css/symbols-technomart.css" rel="stylesheet")    
+
     body  
         header.main-header
             div.top-menu.clearfix
@@ -59,7 +60,7 @@ html
 
                                 a(href="#") #{item}
         main
-            div.top-block
+            div.top-block.clearfix
                 div.top-block__layout
                     div.top-block__row1                
                         div.banner-card-goods.banner-card-goods--yellow
@@ -84,15 +85,17 @@ html
                         div.top-block__col1
                             div.slider  
                                 img(src="img/img_slider_drill2.jpg" width="622" height="266" alt="Дрели соседям на радость").slider__image
-                                div.slider__header
+                                div.slider__header                                                                            
                                     div.slider__layout 
                                         h4.slider__title Перфораторы
-                                        p.slider__content Настоящие мужские игрушки!                                
-                                div.slider__control
-                                    div.slider__layout
-                                        i.icon-left
-                                        i.icon-right
-                                    a(href="#").btn-lnk Открыть каталог
+                                        p.slider__content Настоящие мужские игрушки                                
+                                div.slider__layout                                                                                           
+                                    div.slider__control.clearfix                                    
+                                        a(href="#")
+                                            i.icon-left
+                                        a(href="#")    
+                                            i.icon-right
+                                    a(href="#").btn-lnk.btn-lnk--slider Открыть каталог
                                 
                             
                         div.top-block__col2  
@@ -107,8 +110,49 @@ html
                                     div.banner-card-goods__content
                                         h3.banner-card-goods__header Доставка
                                         div.banner-card-goods__type Бесплатно 
-                                    img(src="img/img_delivery.png" width="75" height="61" ).banner-card-goods__image                                    
-
+                                    img(src="img/img_delivery.png" width="75" height="61" ).banner-card-goods__image
+            div.popular
+                div.popular__layout.clearfix
+                    div.popular__header.clearfix
+                        h2.popular__title Популярные товары:
+                        a(href="#").btn-lnk.btn-lnk--popular Все популярные товары
+                    div.popular__items
+                        div.goods  
+                            div.goods__image
+                                img(src="img/img_bosch_bfg9000.jpg" width="184" height="164")                                
+                            div.goods__layout
+                                p.goods__title Перфоратор BOSCH BFG 9000
+                                p.goods__price-old 32500 Р.
+                                p.goods__price 25500 Р.
+                        div.goods 
+                            div.goods__image
+                                img(src="img/img_bosch_bfg3000.jpg" width="127" height="112")
+                            div.goods__layout
+                                p.goods__title Перфоратор BOSCH BFG 3000
+                                p.goods__price-old 22500 Р.
+                                p.goods__price 15500 Р.       
+                        div.goods   
+                            div.goods__image
+                                img(src="img/img_bosch_bfg6000.jpg" width="144" height="128")
+                            div.goods__layout
+                                p.goods__title Перфоратор BOSCH BFG 6000
+                                p.goods__price-old 30500 Р.
+                                p.goods__price 25500 Р.     
+                        div.goods   
+                            div.goods__image
+                                img(src="img/img_bosch_bfg2000.jpg" width="127" height="112")
+                            div.goods__layout
+                                p.goods__title Перфоратор BOSCH BFG 2000
+                                p.goods__price-old &nbsp;
+                                p.goods__price 12500 Р. 
+            div.popular
+                div.popular__layout.clearfix 
+                    div.popular__header.clearfix
+                        h2.popular__title Популярные производители:
+                        a(href="#").btn-lnk.btn-lnk--popular Все производители                
+                                
+                        
+                
                         
             
             

@@ -36,6 +36,15 @@
     
 }
 
+@font-face{
+    
+    font-family: "PTSansBold";
+    src: url("../fonts/PTSans-Bold.ttf");
+    font-weight: normal;   
+    font-style: normal;
+    
+}
+
 /*  ------------- */
 
 
@@ -78,21 +87,29 @@ body{
 .icon-right{
     
     font-style: normal;
-    font-size: ((@font-size-base+ 22px));
-    line-height: ((@line-height - 6px));     
+    font-size: ((@font-size-base + 32px));
+    line-height: ((@line-height - 6px));   
+    margin: 0;
     
 }
 
 
-.icon-left {
+.icon-left:before {
 
-   text-align: left;
+    float: left;
+    margin: 0;
+    text-align: left;    
+
 
 }
     
-.icon-right {
+.icon-right:before {
 
-   text-align: right;
+    float: right;
+    margin: 0;
+    text-align: right;    
+  
+    
 
 }
 
@@ -378,6 +395,7 @@ body{
 .top-block{
     
     font-size: 0;
+    margin-bottom: 32px;
     
     &__layout{
         
@@ -502,7 +520,7 @@ body{
     width: 622px;
     height: 266px;
     position: relative;
-    z-index: -1;
+    
     
     color: @color-white;
     
@@ -513,39 +531,31 @@ body{
         
     }
     
-    &__header{
-        
-        width: 622px;
+    img{
         
         position: absolute;
         top:0;
         left:0;
-        z-index: 1;
         
+        z-index: -100;
+        
+    }
+    
+    &__header{
+        
+        width: 622px;
+    
         background-color: rgba(0,0,0, 0.3);
         padding: 25px 0 23px 0;
         
-    }
-    
-    &__control{   
-        
-        width: 622px;
-        
-        position: absolute;
-        top:50%;
-        left:0;
-        z-index: 1;
+        margin-bottom: 10px;
         
     }
     
+
     &__title{   
-        
-        position: relative;
-        z-index: 100;
-                
+
         margin:0;
-                
-        text-align: left;
         
         text-transform: uppercase;
         font: bold @font-size-h4 / ((@line-height + 9px)) @font-family-cuprumbold;         
@@ -558,9 +568,192 @@ body{
         margin: 0;
         
     } 
+    
+    &__control{
+        
+        margin-bottom: 44px;
+        
+        a{
+            
+            color: @color-white;
+            
+        }
+        
+    }
 
     
 }
+
+.popular{
+    
+    &__layout{        
+        
+        .layout
+        
+    }    
+    
+    &__header{
+        
+        background-color: @color-yellow2;        
+        
+    }
+    
+    &__title{
+        
+        
+        font: normal @font-size-h2 / ((@line-height + 6px)) @font-family-cuprumregular;
+        text-transform: uppercase;
+        color: @color-blue-dark;
+        float: left;  
+        margin: 0;
+        padding: 29.5px 0;
+        padding-left: 30px;
+    }
+    
+    &__items{
+        
+        text-align: center;
+        font-size:0;
+
+        
+    }  
+    
+    
+}
+
+
+.btn-lnk{
+    
+    display: inline-block;
+    padding:10px;
+    
+    text-align: center;
+    color: @color-white;
+    text-decoration: none;
+    font: normal ((@font-size-base + 1px)) / ((@line-height - 6px)) @font-family-cuprumregular;
+    text-transform: uppercase;
+    
+    border: 1px solid transparent;
+    border-radius: 3px;
+    
+    background-color: @color-red;
+    
+    &--slider{
+        
+        width: 176px; 
+        
+    }
+    
+    &--popular{
+        
+        float: right;
+        margin: 26.5px 0;
+        margin-right: 24px;
+        width: 230px
+        
+    }
+    
+    
+}
+
+.goods{
+    
+    border: 1px solid @color-gray;
+    width: 218px;
+    height: 316px;  
+    text-align: center;
+    margin: 20px;
+    margin-left:0;
+    display: inline-block;
+    vertical-align: top;
+
+    
+    &:last-of-type{
+        
+        margin-right: 0;
+        
+    }
+    
+    &__layout{
+        
+        padding: 0 28px 0 31px;        
+        
+    }
+    
+    &__image{
+        
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 6px; 
+        height: 164px;
+        position: relative;
+        
+        img{
+            
+            position: absolute; 
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            
+            
+        }
+
+        
+    }
+    
+    &__title{
+        
+        font: bold ((@font-size-base + 5px)) / (( @line-height - 4px)) @font-family-ptsansbold;
+        color: @color-black;
+        margin: 0;  
+        margin-bottom: 16px;
+        
+    }
+    
+    &__price-old{
+        
+        
+        font: bold ((@font-size-base + 4px))/ ((@line-height - 6px)) @font-family-ptsansbold;
+        color: @color-gray1;
+        text-decoration: line-through;
+        margin: 0;
+        margin-bottom: 12px;
+        
+        
+    }
+    
+    
+     &__price:after{
+            
+            width: 0;
+            height: 0;
+            border-bottom: 120px solid @color-blue;
+            border-left: 120px solid transparent;
+            
+    }    
+    
+    &__price{
+        
+        padding: 10px 0;
+        width: 140px;
+        
+        margin: 0 auto;
+        margin-bottom: 20px;
+       
+        
+        font: bold ((@font-size-base + 4px))/ ((@line-height - 6px)) @font-family-ptsansbold;
+        color: @color-white;
+        background-color: @color-red;
+        
+
+        border-radius: 5px 0 0 5px;
+                
+    }
+    
+    
+}
+
+
 
 
 
