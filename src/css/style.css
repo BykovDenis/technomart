@@ -436,4 +436,48 @@ body {
   background-color: #ee3643;
   border-radius: 5px 0 0 5px;
 }
+.brands__layout {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+.brands__header {
+  background-color: #f7f3ec;
+  margin-bottom: 20px;
+}
+.brands__title {
+  font: normal 30px / 30px "CuprumRegular", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #32425c;
+  float: left;
+  margin: 0;
+  padding: 29.5px 0;
+  padding-left: 30px;
+}
+.brands__items {
+  text-align: center;
+  font-size: 0;
+  padding: 0;
+  margin-bottom: 65px;
+}
+.brands__item {
+  position: relative;
+  height: 143px;
+  width: 218px;
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  sborder: 1px solid #e7e7e7;
+  display: inline-block;
+  vertical-align: top;
+}
+.brands__item:nth-of-type(4n) {
+  margin-right: 0;
+}
+.brands__item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /*# sourceMappingURL=src/css/style.css.map */

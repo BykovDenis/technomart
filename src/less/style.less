@@ -754,6 +754,80 @@ body{
 }
 
 
+.brands{
+    
+    &__layout{        
+        
+        .layout
+        
+    }    
+    
+    &__header{
+        
+        background-color: @color-yellow2; 
+        margin-bottom: 20px;
+        
+    }
+    
+    &__title{
+        
+        
+        font: normal @font-size-h2 / ((@line-height + 6px)) @font-family-cuprumregular;
+        text-transform: uppercase;
+        color: @color-blue-dark;
+        float: left;  
+        margin: 0;
+        padding: 29.5px 0;
+        padding-left: 30px;
+    }
+    
+    &__items{
+        
+        text-align: center;
+        font-size:0;
+        padding:0;
+        margin-bottom: 65px;
+        
+    }  
+    
+    &__item{
+        
+        position: relative;
+        height: 143px;
+        width: 218px;
+        margin:0;
+        margin-right:20px;
+        margin-bottom:20px;s
+        
+        
+        border: 1px solid @color-gray2;
+        
+        display: inline-block;
+        vertical-align: top;
+        
+        &:nth-of-type(4n){
+            
+            margin-right:0;
+            
+        }
+        
+        img{
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;            
+            transform: translate(-50%, -50%);
+            
+        }
+        
+    }
+    
+    
+}
+
+
+
+
 
 
 
