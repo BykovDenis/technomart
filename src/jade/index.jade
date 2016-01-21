@@ -178,26 +178,32 @@ html
                                    img(src="img/img_brand_metabo.jpg" width="204" height="69" alt="metabo")                                                                      
                 div.service
                     div.service__layout
-                        div.service__header
-                            h2. Сервисы
+                        div.service__header.clearfix
+                            h2 Сервисы
                             p.
                                 Хороший интернет-магазин отличается от плохого не только ценами!
                                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-                        div.service__content
+                                
+                        div.service__content.clearfix
                             
                             ul.service__items
-                                li.service__item.service__item--active Доставка
-                                li.service__item Гарантия
-                                li.service__item Кредит
+                                li.service__item.service__item--active 
+                                    button.btn__service.btn__service--active Доставка
+                                li.service__item 
+                                    button.btn__service Гарантия
+                                li.service__item 
+                                    button.btn__service Кредит
                                 
                             div.service__about 
-                                h4 Доставка
-                                p. 
-                                    Мы с удовольствием доставим ваш товар прямо 
-                                    к вашему подъезду совершенно бесплатно!
-                                    Ведь мы неплохо заработаем, 
-                                    поднимая его на ваш на этаж!
-                                img(src="img/img_delivery_car.png" alt="Доставка")
+                                div.service__col1
+                                    h4 Доставка
+                                    p. 
+                                        Мы с удовольствием доставим ваш товар прямо 
+                                        к вашему подъезду совершенно бесплатно! <br>
+                                        Ведь мы неплохо заработаем, <br> 
+                                        поднимая его на ваш на этаж!
+                                div.service__col2
+                                    img(src="img/img_delivery_car.png" alt="Доставка")
                             
 
                                 

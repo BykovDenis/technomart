@@ -48,7 +48,7 @@
 @font-face{
     
     font-family: "MyriadProRegular";
-    src: url("../fonts/MyriadPro-Regular.ttf");
+    src: url("../fonts/MyriadPro-Regular.otf");
     font-weight: normal;   
     font-style: normal;
     
@@ -352,6 +352,37 @@ body{
         
     }
     
+    &__service{    
+
+            width: 240px;
+
+            text-align: left;
+        
+            font: bold ((@font-size-base + 8px)) / ((@line-height + 6px)) @font-family-cuprumbold;
+
+            padding: 14.5px 0;        
+            padding-left: 23px;
+
+            background-color: @color-blue-dark;        
+            color: @color-white; 
+
+            border: none;
+            border-top: 1px solid @color-blue1;
+            border-bottom: 1px solid @color-blue;
+        
+            
+
+        }    
+    
+    &__service--active{
+        
+        background-color:  @color-white;
+        color: @color-blue-dark;
+        border-top: 1px solid @color-white;
+        border-bottom: 1px solid @color-white;        
+        
+    }
+    
 }
 
 .main-menu{
@@ -398,6 +429,8 @@ body{
         text-decoration: none;
         
     }
+    
+        
     
 }
 
@@ -833,9 +866,11 @@ body{
     
 }
 
-service {
+.service {
     
-    &__layout{
+    background-color: @color-gray3;
+    
+    &__layout{        
         
         .layout
         
@@ -843,29 +878,103 @@ service {
     
     &__header{
         
-        float: left;
-        width: 400px;
-        margin-tpo:0;
-        
+        display: inline-block;
+        vertical-align: top;       
+        text-align: left;     
+        margin-bottom: 67px;
         
         h2{
+            
+            margin: 0;
+        
+            margin-top: 64px;
+            margin-bottom: 28px;
             
             font: normal @font-size-h2 / @line-height @font-family-cuprumregular;
             color: @color-black;
             text-transform: uppercase;
-            text-align: left;
+            
             
         }
         
         p{
             
+            margin:0;
             
+            width: 400px;
             
+            text-align: justify;
+            font: normal @font-size-base / @line-height @font-family-ptsansregular;
+            color: @color-black;    
+                    
         }
-        
         
     }
     
+    &__items{
+        
+        
+        float: left;
+        padding:0;
+        margin:0;    
+        margin-right: 65px;
+        margin-bottom: 102px;
+        width: 240px;
+        
+        font: bold ((@font-size-base + 8px)) / ((@line-height + 6px)) @font-family-cuprumbold;
+        list-style-type: none;
+        
+                
+    }
+    
+    &__about{
+        
+        float: right;
+        width : 620px;        
+
+        
+        img{
+            
+            float: right;
+            margin-top: 23px;
+            
+        }
+        
+    }
+    
+    &__col1{
+        
+        float:left;
+            
+        h4{
+            
+            max-width: 300px;
+            
+            font: normal @font-size-h4/@line-height @font-family-myriadproregular;
+            color: @color-blue-dark;
+            text-transform: uppercase;
+            margin:0;
+            margin-bottom: 41px;
+            
+        }
+        
+        p{
+            
+            width: 300px;  
+            
+            font: normal @font-size-base/@line-height @font-family-ptsansregular;
+            color: @color-black;
+        
+        }
+    }
+    
+    &__col2{
+        
+        float: right;
+        
+    }
+    
+        
     
 }
 
