@@ -45,6 +45,15 @@
     
 }
 
+@font-face{
+    
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadPro-Regular.ttf");
+    font-weight: normal;   
+    font-style: normal;
+    
+}
+
 /*  ------------- */
 
 
@@ -797,7 +806,7 @@ body{
         width: 218px;
         margin:0;
         margin-right:20px;
-        margin-bottom:20px;s
+        margin-bottom:20px;
         
         
         border: 1px solid @color-gray2;
@@ -819,6 +828,41 @@ body{
             transform: translate(-50%, -50%);
             
         }
+        
+    }    
+    
+}
+
+service {
+    
+    &__layout{
+        
+        .layout
+        
+    }
+    
+    &__header{
+        
+        float: left;
+        width: 400px;
+        margin-tpo:0;
+        
+        
+        h2{
+            
+            font: normal @font-size-h2 / @line-height @font-family-cuprumregular;
+            color: @color-black;
+            text-transform: uppercase;
+            text-align: left;
+            
+        }
+        
+        p{
+            
+            
+            
+        }
+        
         
     }
     

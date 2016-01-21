@@ -33,6 +33,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadPro-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 /*  ------------- */
 body {
   width: 1200px;
@@ -408,13 +414,13 @@ body {
   transform: translate(-50%, -50%);
 }
 .goods__title {
-  font: bold 18px / 20px "PTSansBold", Arial, sans-serif;
+  font: bold 18px / 20px "MyriadProRegular", Arial, sans-serif;
   color: #000000;
   margin: 0;
   margin-bottom: 16px;
 }
 .goods__price-old {
-  font: bold 17px/18px "PTSansBold", Arial, sans-serif;
+  font: bold 17px/18px "MyriadProRegular", Arial, sans-serif;
   color: #999999;
   text-decoration: line-through;
   margin: 0;
@@ -431,7 +437,7 @@ body {
   width: 140px;
   margin: 0 auto;
   margin-bottom: 20px;
-  font: bold 17px/18px "PTSansBold", Arial, sans-serif;
+  font: bold 17px/18px "MyriadProRegular", Arial, sans-serif;
   color: #ffffff;
   background-color: #ee3643;
   border-radius: 5px 0 0 5px;
@@ -467,7 +473,7 @@ body {
   margin: 0;
   margin-right: 20px;
   margin-bottom: 20px;
-  sborder: 1px solid #e7e7e7;
+  border: 1px solid #e7e7e7;
   display: inline-block;
   vertical-align: top;
 }
@@ -479,5 +485,21 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+service__layout {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+service__header {
+  float: left;
+  width: 400px;
+  margin-tpo: 0;
+}
+service__header h2 {
+  font: normal 30px / 24px "CuprumRegular", Arial, sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: left;
 }
 /*# sourceMappingURL=src/css/style.css.map */
