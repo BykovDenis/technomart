@@ -570,4 +570,32 @@ body {
 .service__col2 {
   float: right;
 }
+.information {
+  padding-top: 82px;
+}
+.information__layout {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+.information__col1 {
+  float: left;
+  width: 540px;
+}
+.information__col2 {
+  float: right;
+}
+.information__header {
+  margin: 0;
+  margin-bottom: 29px;
+  font: normal 30px/24px "CuprumRegular", Arial, sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+.information__content {
+  margin: 0;
+  margin-bottom: 23px;
+  font: normal 13px/24px "PTSansRegular", Arial, sans-serif;
+  color: #000000;
+}
 /*# sourceMappingURL=src/css/style.css.map */
