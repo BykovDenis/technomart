@@ -75,7 +75,11 @@ body{
 .icon-search,
 .icon-bookmark,
 .icon-basket,
-.icon-phone
+.icon-phone,
+.icon-user,
+.icon-login,
+.icon-logout,
+.icon-home
 {
     
     opacity: .3;
@@ -85,40 +89,75 @@ body{
     
 }
 
-.icon-login{
+.icon-home{
+    
+    font-size: @font-size-base + 3px;
+    line-height: @line-height - 4px;
+    padding: 0;
+    
+}
+
+.icon-user{
+    
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0;
+    padding-right: 13px;
+    
+}
+
+.icon-basket{
+    
+    padding-left: 14px;
+    
+}
+
+.icon-bookmark{
+    
+    padding-left: 27px;
+    padding-right: 10px;
+    
+}
+
+.icon-login,
+.icon-logout{
+    
+    padding-right: 10px;
+    font-size: 22px;
+    line-height: 18px;
+    
+}
+
+.icon-logout{
+    
+    padding: 0;
+    padding: 0;
+    font-size: 22px;
+    line-height: 18px;    
+    
+}
+
+
+.icon-phone{
+
+    color: @color-black;
+    opacity: .3;
+    font-size: (@font-size-base+9px);
+    padding-top: 2px;
+    padding-left:5px;
+    padding-right: 34px;
+}
+
+.icon-up-dir,
+.icon-down-dir{
+    
+    margin:0;
+    
+    font-size: ((@font-size-base + 10px));
+    line-height: ((@line-height - 6px));
     
     opacity: .3;
-    margin: 0;
     
-}
-
-.icon-left,
-.icon-right{
-    
-    font-style: normal;
-    font-size: ((@font-size-base + 32px));
-    line-height: ((@line-height - 6px));   
-    margin: 0;
-    
-}
-
-
-.icon-left:before {
-
-    float: left;
-    margin: 0;
-    text-align: left;    
-
-}
-    
-.icon-right:before {
-
-    float: right;
-    margin: 0;
-    text-align: right;    
-  
-    
-
 }
 
 .clearfix:after{
@@ -132,7 +171,7 @@ body{
 .main-header{   
  
     background-color: @color-yellow-light;  
-    margin-bottom: 59px;
+    /*margin-bottom: 59px;*/
     
 }
 
@@ -188,6 +227,7 @@ body{
     padding: 0;
     margin: 0;
     
+
     a{        
         
         color: @color-white;         
@@ -214,7 +254,7 @@ body{
     &__tab{
 
         float: right;
-        width: 153px;
+        width: 160px;        
         
 
     }
@@ -222,7 +262,14 @@ body{
     &__basket{
 
         float: right;
-        width: 138px;
+        width: 150px;
+                
+        &--added{
+        
+        background-color: @color-red;
+        color: @color-white;
+        
+    }
        
 
     }
@@ -240,8 +287,7 @@ body{
 }
 
 .header-info{
-    
-    margin-bottom: 40px;
+
     
     &__layout{
         
@@ -278,7 +324,7 @@ body{
     
     width: 270px;
     padding: 0 10px;
-    padding-right: 68px;
+    padding-right: 42px;
     
     &__phone{
         
@@ -301,29 +347,87 @@ body{
         color: @color-blue-dark;        
         text-align: center;
         
-    }
-    
-    .icon-phone{
-        
-        color: @color-black;
-        opacity: .3;
-        font-size: (@font-size-base+9px);
-        padding-top: 2px;
-        padding-left:5px;
-        padding-right: 34px;
-        
-    }
+    }  
+
     
 }
 
 .auth{
     
     float: right;
+    width: 305px;
+    
+    &__layout{
+        
+        padding-left: 13px;
+        
+    }
+        
+    &--checkin{
+        
+        padding: 9.78px 0;
+        
+        background-color: @color-white;
+        font: normal ((@font-size-base + 8px))/((@line-height - 6px)) @font-family-cuprumregular;
+        color: @color-black;
+        
+    }
+    
+    &__name{
+        
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 27px;
+    }
     
     a{
         
         display: inline-block;
         vertical-align: top;
+       
+        color: @color-black;
+        text-decoration: none;
+        
+    }
+    
+    
+    &__menu{
+                
+        
+        list-style-type: none;
+        padding:0;
+        margin:0;        
+        padding-top: 17.53px;
+        padding-left: 8px;
+        height: 35.5px;
+        
+        float: left;
+        
+        a{
+            font: normal ((@font-size-base + 3px)) /((@line-height - 6px)) @font-family-cuprumregular;
+            text-decoration: underline;
+            
+        }
+        
+        li{
+            
+            display: inline-block;
+            vertical-align: top;
+                
+        }
+        
+        li:after{
+            
+            content: "\2022";
+            padding-left: 14.5px;
+            padding-right: 12px;
+        }
+        
+        li:last-of-type:after{
+            
+            content: '';
+        }       
+
         
     }
 }
@@ -342,6 +446,7 @@ body{
     
     &--signin{
         
+        float:right;
         margin-right: 10px;
         width: 111px;
         text-align: left;
@@ -352,8 +457,31 @@ body{
     
     &--signup{
         
+        float: right;
         width: 150px;
         text-align:center;
+        
+    }
+    
+    &--show-all{
+        
+        padding: 8.83px 0;
+        
+        
+        width: 140px;
+        
+        text-align: center;
+        text-transform: uppercase;
+        
+        font: normal @font-size-base/ @line-height @font-family-ptsansregular;
+        color: @color-black;
+        
+        border: 1px solid @color-gray;
+        border-radius: 5px;
+        
+        
+        
+        
         
     }
     
@@ -439,9 +567,71 @@ body{
     
 }
 
+.breadcrumbs{
+    
+    &__layout{
+        
+        .layout       
+        
+    }
+    
+    
+    &__items{
+        
+        margin: 0;
+        padding: 19px 0;
+        
+        list-style-type: none;  
+        
+        font-size: 0;
+    
+    }
+    
+    &__item{                  
+            
+        display: inline-block;
+        vertical-align: top;
+        
+        a{
+            
+            text-transform: uppercase;
+            font: normal @font-size-base / ((@line-height - 6px)) @font-family-ptsansregular;
+            color: @color-black;
+            text-decoration: none;
+            
+        }
+        
+        & .icon-right{
+    
+            margin: 0;
+            padding: 0 10.6px;
+
+            opacity: .3;
+            font-style: normal;
+            font-size: @font-size-base + 1px;
+            line-height: @line-height - 4px;   
+        
+    
+        } 
+            
+   
+        &:first-of-type .icon-right   {
+
+            padding:0;    
+            padding-right: 12px;
+
+        }        
+        
+        
+     }        
+    
+    
+}
+
 .top-block{
     
     font-size: 0;
+    margin-top: 58px;
     margin-bottom: 32px;
     
     &__layout{
@@ -578,6 +768,33 @@ body{
         
     }
     
+    .icon-left,
+    .icon-right{
+
+        font-style: normal;
+        font-size: ((@font-size-base + 32px));
+        line-height: ((@line-height - 6px));   
+        margin: 0;
+
+    }
+
+
+    .icon-left:before {
+
+        float: left;
+        margin: 0;
+        text-align: left;    
+
+    }
+
+    .icon-right:before {
+
+        float: right;
+        margin: 0;
+        text-align: right;     
+
+    }
+    
     img{
         
         position: absolute;
@@ -641,7 +858,15 @@ body{
     
     &__header{
         
-        background-color: @color-yellow2;        
+        background-color: @color-yellow2;          
+        
+        
+    }
+    
+    &__header--goods-name{
+        
+        background-color: @color-gray3; 
+        margin-bottom: 19.5px;
         
     }
     
@@ -654,7 +879,8 @@ body{
         float: left;  
         margin: 0;
         padding: 29.5px 0;
-        padding-left: 30px;
+        padding-left: 30px;        
+       
     }
     
     &__items{
@@ -664,6 +890,17 @@ body{
 
         
     }  
+    
+    p {
+        
+        clear: both;
+        margin-bottom : 75px;
+        
+        font: normal @font-size-base/ @line-height @font-family-ptsansregular;
+        color: @color-black;
+
+        
+    }
     
     
 }
@@ -1087,6 +1324,269 @@ body{
     
 }
 
+
+/* Каталог товаров */
+
+.catalog{
+    
+    &__layout{
+        
+        .layout  
+        
+    }
+    
+}
+
+/* Фильтры по устройствам */
+
+.filters{    
+    
+    float: left;
+    
+    width: 219px;    
+    margin-bottom: 100px;
+    
+    &__header{
+        
+        margin:0;
+        padding: 9.5px 0;
+        padding-left: 17px;
+        
+        background-color: @color-yellow2;
+        border-radius: 3px;  
+        
+        font: normal @font-size-base / ((@line-height - 6px)) @font-family-ptsansregular;
+        color: @color-black;
+        text-transform: uppercase;       
+        
+        
+    }
+    
+    &__price {
+    
+        height: 207px;
+        border-bottom: 1px solid @color-gray;
+    
+        p{
+
+            margin: 0;
+            padding: 12.27px 0;        
+
+            font: bold ((@font-size-base + 4px))/ ((@line-height + 6px)) @font-family-ptsansbold;
+            color: @color-black;
+            text-transform: uppercase;
+
+        }
+    }
+    
+}
+
+.filter-mans{
+    
+    border-bottom: 1px solid @color-gray;
+
+    
+    &__header{
+        
+        margin: 0;
+        padding: 14.25px 0;  
+        
+        font: bold ((@font-size-base + 4px))/ ((@line-height + 6px)) @font-family-ptsansbold;
+        color: @color-black;
+        text-transform: uppercase;          
+        
+    }
+    
+    &__content{
+        
+        list-style-type: none;
+        font-size: 0;
+        
+            a{
+
+                display: inline-block;
+                vertical-align: top;
+                font: normal ((@font-size-base + 2px))/ ((@line-height - 4px)) @font-family-ptsansregular;
+                color: @color-black;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding:3px 0;
+                
+
+            }        
+
+    }
+    
+    &__item:before{
+
+        font: normal 28px/28px 'symbols-technomart';
+        content: '\2610';
+        opacity: .3;
+        padding-right: 13px; 
+
+    }
+    
+    &__item--active:before{
+
+        content: '\2611';
+
+    }    
+    
+
+    &__item{
+
+        margin-bottom: 12px;   
+
+    } 
+    
+    &__item:last-of-type{
+    
+        margin-bottom: 18px;
+    
+    }    
+    
+}
+
+.filter-power{
+    
+    border-bottom: 1px solid @color-gray;
+    margin-bottom: 50px;
+    
+    &__header{
+        
+        margin: 0;
+        padding-top: 14.25px;
+        padding-bottom: 7px; 
+        
+        font: bold ((@font-size-base + 4px))/ ((@line-height + 6px)) @font-family-ptsansbold;
+        color: @color-black;
+        text-transform: uppercase;          
+        
+    }
+    
+    &__content{
+        
+        list-style-type: none;
+        font-size: 0;
+  
+        
+            a{
+
+
+                font: normal ((@font-size-base + 2px))/ ((@line-height - 4px)) @font-family-ptsansregular;
+                color: @color-black;
+                text-transform: uppercase;
+                text-decoration: none;
+
+            }
+        
+    }
+    
+       &__item:before{
+
+            font: normal 28px/28px 'symbols-technomart';
+            content: '\25cb';
+            opacity: .3;
+            padding-right: 13px; 
+
+        }
+
+        &__item{
+
+            margin-bottom: 12px;   
+
+        } 
+
+        &__item--active:before{
+
+            content: '\25cf';
+
+        }     
+    
+}
+
+/*  Панель сортировки */
+
+.catalog-items{
+    
+    background-color: @color-yellow2;
+    width: 683px;     
+    float:right;
+
+    
+        margin:0;
+        padding: 9.5px 0;
+        padding-left: 17px;
+        
+        background-color: @color-yellow2;
+        border-radius: 3px;  
+        
+        font: normal @font-size-base / ((@line-height - 6px)) @font-family-ptsansregular;
+        color: @color-black;
+        text-transform: uppercase; 
+    
+    p{
+        
+        float: left;
+        padding: 0;
+        margin: 0;
+        
+        font: normal @font-size-base/((@line-height - 6px)) @font-family-ptsansregular;
+        color: @color-black;
+        text-transform: uppercase;
+        
+    }
+    
+    ul{
+        
+        float: right;
+        font-size: 0;
+        padding: 0;
+                
+    }
+    
+    &__sort{
+    
+            li{
+
+                display: inline-block;
+                vertical-align: top;  
+                height: 18px;              
+
+            }
+        
+            li:first-of-type{
+
+                margin-right: 72px;    
+
+            }
+        
+            li:nth-of-type(2){
+
+                margin-right: 66px;    
+
+            }
+
+            a{
+
+                font: normal @font-size-base / ((@line-height - 6px)) @font-family-ptsansregular;
+                color: @color-black;
+                opacity: .3;
+                text-decoration: none;
+                text-transform: uppercase;
+
+            }        
+    }
+    
+    &__sort-items{
+        
+        float:right;
+        
+    }
+}
+
+/* Подвал */
+
 .main-footer{    
     
     background-color: @color-blue-dark;
@@ -1275,8 +1775,6 @@ body{
         float: left;
         margin:0;        
         
-        
-        
     }
     
     &__development{
@@ -1287,15 +1785,11 @@ body{
         text-align: justify;
         padding-right: 15px;  
         
-    }
-    
-    
-    
-    
-    
-     
+    }    
     
 }
+
+
 
 
 

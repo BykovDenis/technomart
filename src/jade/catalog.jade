@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+html
+    head    
+        meta(charset="utf-8")
+        title Техномарт
+        link(href="css/normalize.css" rel="stylesheet")
+        link(href="css/symbols-technomart.css" rel="stylesheet")            
+        link(href="css/style.css" rel="stylesheet")
+
+    body  
+        header.main-header
+            div.top-menu.clearfix
+                div.top-menu__layout
+                    a(href="index.html")
+                    h1.top-menu.logo ТЕХНОМАРТ
+                    ul.rules.clearfix
+                        li
+                            div.rules__search 
+                                i.icon-search 
+                                Поиск
+                        li
+                            div.rules__issue-order 
+                                a(href="#") Оформить заказ                    
+                        li
+                            div.rules__basket.rules__basket--added 
+                                i.icon-basket
+                                Корзина:                
+                                span.basket__count 10
+                        li
+                            div.rules__tab 
+                                i.icon-bookmark
+                                Закладки:                 
+                                span.tab__count 0
+            div.header-info.clearfix
+                div.header-info__layout
+                    p.header-info__content.             
+                        Интернет-магазин
+                        строительных материалов <br>             
+                        и инструментов для ремонта
+                    div.auth.auth--checkin.clearfix   
+                        div.auth__layout
+                            a(href="#")
+                                i.icon-user 
+                                span.auth__name Равшан Джамшутович
+                            a(href="#")
+                                i.icon-logout                                
+                            ul.auth__menu
+                                li.auth__history 
+                                    a(href="#") Мои заказы
+                                li.auth__profile 
+                                    a(href="#") Личный кабинет                        
+                    div.contacts
+                        div.contacts__phone <i class="icon-phone"></i> +7 (812) 555-05-55
+                        div.contacts__address                        
+                            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8  
+            nav.main-menu.clearfix   
+
+                div.main-menu__layout
+
+                    -items = ["Главная","Компания","Каталог","Новости","Спецпредложения","Доставка","Контакты"]
+
+                    ul.main-menu__items
+
+                        each item in items 
+
+                            li.main-menu__item 
+
+                                a(href="#") #{item}
+        main
+            div.breadcrumbs
+                div.breadcrumbs__layout
+                    ul.breadcrumbs__items
+                        li.breadcrumbs__item
+                            a(href="#")
+                                i.icon-home
+                                i.icon-right
+                        li.breadcrumbs__item
+                            a(href="#")
+                                Каталог
+                                i.icon-right
+                        li.breadcrumbs__item
+                            a(href="#")
+                                Инструмент
+                                i.icon-right
+                        li.breadcrumbs__item
+                            a(href="#")
+                                Перфораторы  
+            div.popular
+                div.popular__layout.clearfix
+                    div.popular__header--goods-name.clearfix
+                        h2.popular__title Перфораторы  
+            div.catalog
+                div.catalog__layout.clearfix                    
+                    div.filters
+                        div.filters__header Фильтр:
+                        div.filters__price 
+                            p Цена:
+                            div.slider-price
+                        div.filter-mans
+                            p.filter-mans__header Производители:
+                            div.filter-mans__content
+                                - var mans = ["Bosch","Интерскол","Makita","Dewalt","Hitachi"]                    
+                                    each man in mans  
+                                        if(man == "Bosch" || man == "Makita")
+                                            li.filter-mans__item.filter-mans__item--active                                             
+                                                a(href="#") #{man}
+                                        else
+                                            li.filter-mans__item
+                                                a(href="#") #{man}
+                        div.filter-power
+                            p.filter-power__header Питание
+                            div.filter-power__content
+                                - var powers = ["Аккумуляторные","Сетевые"]
+                                    each power in powers                                        
+                                        if(power == "Аккумуляторные")
+                                            li.filter-power__item.filter-power__item--active
+                                                a(href="#") #{power}                        
+                                        else
+                                            li.filter-power__item.filter-power__item
+                                                a(href="#") #{power}
+                        button.btn.btn--show-all Показать
+                    div.catalog-items
+                        div.catalog-items__sort.clearfix
+                            div.catalog-items__sort-items
+                                a(href="#")
+                                    i.icon-up-dir
+                                a(href="#")
+                                    i.icon-down-dir                        
+                            p Сортировка:
+                            ul
+                                li 
+                                    a(href="#") По цене
+                                li
+                                    a(href="#") По типу                                
+                                li 
+                                    a(href="#") По функциональности
+
+            div.popular
+                div.popular__layout.clearfix
+                    div.popular__header--goods-name.clearfix
+                        h2.popular__title ПАРА СЛОВ О ПЕРФОРАТОРАХ
+                        p.     
+                            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+
+        footer.main-footer
+            div.main-footer__layout
+                div.main-footer__row1.clearfix
+                    a(href="index.html")
+                        b.logo.logo--footer ТЕХНОМАРТ
+                        ul.main-footer__menu
+                            li 
+                                a(href="#")
+                                    Компания
+                            li 
+                                a(href="#")
+                                    Новости
+                            li 
+                                a(href="#")
+                                    Каталог
+                            li     
+                                a(href="#")
+                                    Доставка
+                            li      
+                                a(href="#")
+                                    Контакты                                   
+                    
+                div.main-footer__row2.clearfix
+                        p.
+                            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+                            +7 (812) 555-05-55                        
+
+                        ul.main-footer__menu.main-footer__menu--submenu
+                            li
+                                a(href="#")
+                                    Материалы
+                            li
+                                a(href="#")
+                                    Техника
+                            li
+                                a(href="#")
+                                    Инструмент
+                            li
+                                a(href="#")
+                                    Спецпредложения                                
+            div.main-footer__row3
+                div.main-footer__layout.clearfix
+                    p.main-footer__copyright.
+                        © 2010–2016 Компания «Техномарт» <br>
+                        Все права защищены
+                    ul.main-footer__social
+                        li
+                            a(href="#")
+                                i(class="icon-vk")
+                        li
+                            a(href="#")
+                                i(class="icon-facebook")
+                        li
+                            a(href="#")
+                                i(class="icon-instagramm")  
+                    div.main-footer__about.clearfix
+                        div.main-footer__callback
+                            p Обратная связь
+                            a(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
+                        div.main-footer__development
+                            p Разработано —
+                            a(href="http://htmlacademy.ru") htmlacademy.ru
+        
+                        
+                
+                        
+            
+            
+            
+        
+
+            
+                        
+                
+                
+                
+             
+
+                  
+            
+              
+            
+          
+    
