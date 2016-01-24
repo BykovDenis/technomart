@@ -109,7 +109,6 @@ body{
     margin: 0;
     text-align: left;    
 
-
 }
     
 .icon-right:before {
@@ -121,7 +120,6 @@ body{
     
 
 }
-
 
 .clearfix:after{
     
@@ -168,7 +166,14 @@ body{
     color: @color-white;
     background-color: @color-red;
 
-    /* border-bottom: 5px solid @color-claret; */
+    box-shadow: 0 5px 0 0 @color-claret;
+    
+    &--footer {
+        
+        font: bold @font-size-h2/ ((@line-height + 6px))  @font-family-cuprumbold;  
+        padding: 16.5px 0;
+        
+    }
 
 }  
 
@@ -695,6 +700,18 @@ body{
         
     }
     
+    &--information{
+        
+        width: 200px;
+        
+    }
+    
+    &--information2{
+        
+        width: 280px;
+        
+    }    
+    
     
 }
 
@@ -978,10 +995,7 @@ body{
 
 .information{
     
-    margin:0;
-    margin-top: 83px;
-    margin-bottom: 87px;
-    
+    margin: 83px 0;    
     
     
     &__layout{
@@ -1073,13 +1087,20 @@ body{
     
 }
 
-.main-footer{
+.main-footer{    
     
     background-color: @color-blue-dark;
+   
     
     &__layout{
         
         .layout
+        
+    }
+    
+    &__row1{
+        
+         background-color: @color-blue-dark;
         
     }
     
@@ -1088,23 +1109,24 @@ body{
         
         float: right;
         margin: 0;
-        padding: 0;
+        padding: 0;       
+        margin: 36px 0;
         
-        margin: 43px 0;
+        font-size: 0;
         
         li{
             
             display: inline-block;
             vertical-align: top;
             
-            margin-right: 59px;
-            
-            :last-of-type{
+            margin-right: 59px;          
+
+        }
+        
+        li:last-of-type{
                 
-                margin-right: 0;
+            margin-right: 0;
                 
-            }
-            
         }
         
         a{            
@@ -1116,7 +1138,161 @@ body{
             
         }
         
-    }   
+    }
+    
+    &__menu--submenu{
+        
+        margin: 0;
+        padding: 0;
+        
+        a{       
+
+            color: @color-orange-light;
+            
+        }
+        
+    }
+    
+    &__row2{
+        
+        margin: 0;   
+        padding-bottom: 50px;
+
+        
+        p{
+            
+            float: left;
+            margin: 0;
+            padding: 0;         
+            
+            width: 380px;            
+            
+            font: normal ((@font-size-base + 5px))/ @line-height @font-family-cuprumregular;
+            color: @color-white;
+            
+            
+        }
+        
+    }
+    
+    &__row3{
+        
+        padding-top: 35px;
+        padding-bottom: 30px;        
+        
+        background-color: @color-blue;
+        
+    }
+    
+    &__copyright{
+        
+        float: left;
+        margin: 0;
+        margin-right: 90px;
+        
+        width: 300px;
+        
+        
+        font: normal ((@font-size-base + 3px))/ ((@line-height - 6px)) @font-family-cuprumregular;
+        color: @color-white;      
+        
+    }
+    
+    &__social{
+        
+        float: left;
+        
+        margin: 0;
+        padding: 0;        
+        
+        li{
+            
+            display: inline-block;
+            vertical-align: top;    
+            position: relative;
+            
+            width: 40px;
+            height: 40px;
+            margin-right: 4.5px;
+            
+            background-color: @color-blue-dark2;
+            border-radius: 50%;
+            
+        }
+        
+        li:last-of-type{
+            
+            margin-right: 0;
+            
+        }
+        
+        a{
+            
+            position: absolute;
+            top:0;
+            left:0;
+            
+            font-size: 18px;
+            line-height: 10.56px;
+            color: @color-white;
+            text-decoration: none;
+            
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        
+    }
+    
+    &__about{
+        
+        float: right;
+        margin: 0;
+        width: 300px;
+        
+        p{
+            
+            margin: 0;
+            
+            font: normal ((@font-size-base + 3px)) / (( @line-height - 6px)) @font-family-cuprumregular;
+            color: @color-white;
+        }
+        
+        a {
+            
+            font: normal ((@font-size-base + 3px)) / (( @line-height - 6px)) @font-family-cuprumregular;
+            color: @color-orange-light;            
+            text-decoration: none; 
+            
+        }
+        
+        
+    }
+    
+    &__callback{
+        
+        float: left;
+        margin:0;        
+        
+        
+        
+    }
+    
+    &__development{
+        
+        float: right;
+        margin:0;
+        
+        text-align: justify;
+        padding-right: 15px;  
+        
+    }
+    
+    
+    
+    
+    
      
     
 }
