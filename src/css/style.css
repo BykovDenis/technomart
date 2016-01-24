@@ -556,7 +556,7 @@ body {
 }
 .service__col1 h4 {
   max-width: 300px;
-  font: normal 36px/24px "MyriadProRegular", Arial, sans-serif;
+  font: normal 36px/24px "CuprumRegular", Arial, sans-serif;
   color: #32425c;
   text-transform: uppercase;
   margin: 0;
@@ -571,7 +571,9 @@ body {
   float: right;
 }
 .information {
-  padding-top: 82px;
+  margin: 0;
+  margin-top: 83px;
+  margin-bottom: 87px;
 }
 .information__layout {
   margin: 0 auto;
@@ -597,5 +599,57 @@ body {
   margin-bottom: 23px;
   font: normal 13px/24px "PTSansRegular", Arial, sans-serif;
   color: #000000;
+}
+.information__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 37px;
+  list-style-type: none;
+  font: normal 18px/20px "CuprumRegular", Arial, sans-serif;
+  color: #000000;
+}
+.information__list li:before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 2px;
+  background: url(../img/icon_list.png) 0 0 no-repeat;
+  background-size: 25px 2px;
+  content: '';
+  padding-right: 11px;
+}
+.information__list li {
+  margin-bottom: 19px;
+}
+.information__map {
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+.main-footer {
+  background-color: #32425c;
+}
+.main-footer__layout {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}
+.main-footer__menu {
+  float: right;
+  margin: 0;
+  padding: 0;
+  margin: 43px 0;
+}
+.main-footer__menu li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 59px;
+}
+.main-footer__menu li :last-of-type {
+  margin-right: 0;
+}
+.main-footer__menu a {
+  font: normal 18px / 24px "CuprumRegular", Arial, sans-serif;
+  color: #f1f5f7;
+  text-decoration: none;
 }
 /*# sourceMappingURL=src/css/style.css.map */

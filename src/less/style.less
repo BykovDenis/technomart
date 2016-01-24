@@ -950,7 +950,7 @@ body{
             
             max-width: 300px;
             
-            font: normal @font-size-h4/@line-height @font-family-myriadproregular;
+            font: normal @font-size-h4/@line-height @font-family-cuprumregular;
             color: @color-blue-dark;
             text-transform: uppercase;
             margin:0;
@@ -978,7 +978,9 @@ body{
 
 .information{
     
-    padding-top:82px;
+    margin:0;
+    margin-top: 83px;
+    margin-bottom: 87px;
     
     
     
@@ -1024,8 +1026,100 @@ body{
         
     }
     
+    &__list{
+        
+        padding: 0;
+        margin: 0;
+        margin-bottom :37px;
+        
+        list-style-type: none;
+        
+        font: normal ((@font-size-base+ 5px ))/((@line-height - 4px)) @font-family-cuprumregular;
+        color: @color-black;
+        
+        
+        li:before{
+                
+                display: inline-block;
+                vertical-align: middle;    
+                
+                width: 25px;
+                height: 2px;    
+            
+                background: url(../img/icon_list.png) 0 0 no-repeat;
+                background-size: 25px 2px;   
+            
+                content: '';
+                padding-right: 11px;          
+            
+            }
+        
+        li{          
+ 
+            margin-bottom: 19px;
+            
+        }       
+
+        
+    }
+    
+    
+    &__map{
+
+        margin-top: 33px;
+        margin-bottom: 33px;
+
+    }    
+    
 }
 
+.main-footer{
+    
+    background-color: @color-blue-dark;
+    
+    &__layout{
+        
+        .layout
+        
+    }
+    
+    
+    &__menu{
+        
+        float: right;
+        margin: 0;
+        padding: 0;
+        
+        margin: 43px 0;
+        
+        li{
+            
+            display: inline-block;
+            vertical-align: top;
+            
+            margin-right: 59px;
+            
+            :last-of-type{
+                
+                margin-right: 0;
+                
+            }
+            
+        }
+        
+        a{            
+                    
+            font: normal ((@font-size-base + 5px)) / @line-height @font-family-cuprumregular;
+            color: @color-yellow-light;      
+            
+            text-decoration: none;
+            
+        }
+        
+    }   
+     
+    
+}
 
 
 
