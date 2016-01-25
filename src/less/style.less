@@ -893,7 +893,7 @@ body{
         
     }  
     
-    p {
+    &__text{
         
         clear: both;
         margin-bottom : 75px;
@@ -1521,9 +1521,9 @@ body{
 
     font: normal @font-size-base / ((@line-height - 6px)) @font-family-ptsansregular;
     color: @color-black;
-    text-transform: uppercase; 
     
-    p{
+    
+    &__label{
         
         float: left;
         padding: 2.5px 0;
@@ -1617,6 +1617,28 @@ body{
         border: 0;
         
     }
+        
+    &__goods{
+
+        font-size: 0;
+        margin-bottom: 20px;
+        
+        .goods{
+        
+            margin-bottom:0;
+        
+        
+        }
+        
+        .goods:nth-child(3n){
+        
+            margin-right:0;        
+        
+        }
+
+    }
+        
+        
 }
 
 /* Подвал */

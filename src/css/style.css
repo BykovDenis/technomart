@@ -514,7 +514,7 @@ body {
   text-align: center;
   font-size: 0;
 }
-.popular p {
+.popular__text {
   clear: both;
   margin-bottom: 75px;
   font: normal 13px/24px "PTSansRegular", Arial, sans-serif;
@@ -875,17 +875,14 @@ body {
 }
 /*  Панель сортировки */
 .catalog-items {
-  width: 683px;
+  width: 700px;
   float: right;
   margin: 0;
-  padding: 5.5px 0;
-  background-color: #f7f3ec;
   border-radius: 3px;
   font: normal 13px / 18px "PTSansRegular", Arial, sans-serif;
   color: #000000;
-  text-transform: uppercase;
 }
-.catalog-items p {
+.catalog-items__label {
   float: left;
   padding: 2.5px 0;
   margin: 0;
@@ -897,16 +894,19 @@ body {
   float: right;
   font-size: 0;
   padding: 2.5px 0;
+  margin-right: 37.72px;
 }
 .catalog-items__sort {
-  padding: 0;
+  padding: 5.5px 0;
+  background-color: #f7f3ec;
   padding-left: 19px;
-  padding-right: 16px;
+  padding-right: 5px;
 }
 .catalog-items__sort li {
   display: inline-block;
   vertical-align: top;
   height: 18px;
+  border-bottom: 1px dotted #ee3643;
 }
 .catalog-items__sort li:first-of-type {
   margin-right: 72px;
@@ -923,6 +923,31 @@ body {
 }
 .catalog-items__sort-items {
   float: right;
+}
+.catalog-items__sort-items a {
+  opacity: 1;
+}
+.catalog-items--active {
+  opacity: 1;
+  color: #ee3643;
+}
+.catalog-items--active a {
+  opacity: 1;
+  color: #ee3643;
+  font-weight: bold;
+}
+.catalog-items--active:first-of-type {
+  border: 0;
+}
+.catalog-items__goods {
+  font-size: 0;
+  margin-bottom: 20px;
+}
+.catalog-items__goods .goods {
+  margin-bottom: 0;
+}
+.catalog-items__goods .goods:nth-child(3n) {
+  margin-right: 0;
 }
 /* Подвал */
 .main-footer {
