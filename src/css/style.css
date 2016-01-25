@@ -878,8 +878,7 @@ body {
   width: 683px;
   float: right;
   margin: 0;
-  padding: 9.5px 0;
-  padding-left: 17px;
+  padding: 5.5px 0;
   background-color: #f7f3ec;
   border-radius: 3px;
   font: normal 13px / 18px "PTSansRegular", Arial, sans-serif;
@@ -888,7 +887,7 @@ body {
 }
 .catalog-items p {
   float: left;
-  padding: 0;
+  padding: 2.5px 0;
   margin: 0;
   font: normal 13px/18px "PTSansRegular", Arial, sans-serif;
   color: #000000;
@@ -897,7 +896,12 @@ body {
 .catalog-items ul {
   float: right;
   font-size: 0;
+  padding: 2.5px 0;
+}
+.catalog-items__sort {
   padding: 0;
+  padding-left: 19px;
+  padding-right: 16px;
 }
 .catalog-items__sort li {
   display: inline-block;

@@ -72,6 +72,8 @@ body{
     
 }
 
+
+
 .icon-search,
 .icon-bookmark,
 .icon-basket,
@@ -535,10 +537,10 @@ body{
        
         background-color: @color-blue-dark;
         border-bottom: 5px solid @color-blue;
-        
             
         
-    }
+    }    
+
     
     &__item{
         
@@ -1509,26 +1511,22 @@ body{
 
 .catalog-items{
     
-    background-color: @color-yellow2;
-    width: 683px;     
-    float:right;
 
+    width: 700px;     
+    float:right;
     
-        margin:0;
-        padding: 9.5px 0;
-        padding-left: 17px;
-        
-        background-color: @color-yellow2;
-        border-radius: 3px;  
-        
-        font: normal @font-size-base / ((@line-height - 6px)) @font-family-ptsansregular;
-        color: @color-black;
-        text-transform: uppercase; 
+    margin:0;       
+
+    border-radius: 3px;  
+
+    font: normal @font-size-base / ((@line-height - 6px)) @font-family-ptsansregular;
+    color: @color-black;
+    text-transform: uppercase; 
     
     p{
         
         float: left;
-        padding: 0;
+        padding: 2.5px 0;
         margin: 0;
         
         font: normal @font-size-base/((@line-height - 6px)) @font-family-ptsansregular;
@@ -1541,17 +1539,25 @@ body{
         
         float: right;
         font-size: 0;
-        padding: 0;
+        padding: 2.5px 0;
+        margin-right: 37.72px;
                 
     }
     
     &__sort{
+        
+        padding: 5.5px 0;   
+        background-color: @color-yellow2;     
+        
+        padding-left: 19px;
+        padding-right: 5px;
     
             li{
 
                 display: inline-block;
                 vertical-align: top;  
-                height: 18px;              
+                height: 18px;    
+                border-bottom: 1px dotted @color-red;
 
             }
         
@@ -1576,11 +1582,39 @@ body{
                 text-transform: uppercase;
 
             }        
-    }
+    } 
     
     &__sort-items{
         
         float:right;
+   
+        
+        a{
+            
+            opacity: 1;
+        }
+        
+    }
+    
+    
+    
+    &--active {
+        
+            opacity: 1;
+            color: @color-red;
+        
+        a{        
+            opacity: 1;
+            color: @color-red;
+            font-weight: bold;
+            
+        }
+        
+    }
+    
+    &--active:first-of-type{
+        
+        border: 0;
         
     }
 }

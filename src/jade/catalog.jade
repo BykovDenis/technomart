@@ -119,21 +119,30 @@ html
                                             li.filter-power__item.filter-power__item
                                                 a(href="#") #{power}
                         button.btn.btn--show-all Показать
-                    div.catalog-items
+                    div.catalog-items                        
                         div.catalog-items__sort.clearfix
                             div.catalog-items__sort-items
                                 a(href="#")
-                                    i.icon-up-dir
+                                    i.icon-up-dir.catalog-items--active
                                 a(href="#")
                                     i.icon-down-dir                        
                             p Сортировка:
                             ul
-                                li 
-                                    a(href="#") По цене
+                                li.catalog-items--active
+                                    a(href="#")  По цене
                                 li
                                     a(href="#") По типу                                
                                 li 
-                                    a(href="#") По функциональности
+                                    a(href="#") По функционалу
+                        div.catalog-items__goods
+                            div.goods 
+                                div.goods__image
+                                    img(src="img/img_bosch_bfg3000.jpg" width="127" height="112")
+                                div.goods__layout
+                                    p.goods__title Перфоратор BOSCH BFG 3000
+                                    p.goods__price-old 22500 Р.
+                                    p.goods__price 15500 Р.  
+
 
             div.popular
                 div.popular__layout.clearfix
