@@ -39,7 +39,7 @@ html
                         и инструментов для ремонта
                     div.auth.auth--checkin.clearfix   
                         div.auth__layout
-                            a(href="#")
+                            a(href="#").auth__name
                                 i.icon-user 
                                 span.auth__name Равшан Джамшутович
                             a(href="#")
@@ -64,8 +64,14 @@ html
                         each item in items 
 
                             li.main-menu__item 
+                            
+                                if item == "Главная"
+                                
+                                    a(href="index.html") #{item}
+                                    
+                                else
 
-                                a(href="#") #{item}
+                                    a(href="#") #{item}
         main
             div.breadcrumbs
                 div.breadcrumbs__layout
@@ -197,15 +203,24 @@ html
                                 div.goods__layout
                                     p.goods__title Перфоратор BOSCH BFG 2000
                                     p.goods__price-old &nbsp;
-                                    p.goods__price 12500 Р.                                         
+                                    p.goods__price 12500 Р. 
+                        div.paginator
+                            ul.paginator__menu
+                                li.paginator__menu--active
+                                    a(href="#") 1
+                                li
+                                    a(href="#") 2
+                                li
+                                    a(href="#") 3
+                                li
+                                    a(href="#") Следующая                                   
 
 
-            div.popular
-                div.popular__layout.clearfix
-                    div.popular__header--goods-name.clearfix
-                        h2.popular__title ПАРА СЛОВ О ПЕРФОРАТОРАХ
-                        p.popular__text     
-                            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+            div.popular.popular--gray            
+                div.popular__layout.clearfix                    
+                    h2.popular__title.popular__title--about ПАРА СЛОВ О ПЕРФОРАТОРАХ
+                    p.popular__text.popular__text--about     
+                        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
 
         footer.main-footer
             div.main-footer__layout
