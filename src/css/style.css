@@ -66,7 +66,8 @@ body {
   font-size: 18px;
   line-height: 18px;
   padding: 0;
-  padding-right: 13px;
+  padding-right: 6px;
+  padding-left: 9px;
 }
 .icon-basket {
   padding-left: 14px;
@@ -160,6 +161,7 @@ body {
 .rules__tab {
   float: right;
   width: 160px;
+  margin-right: 5px;
 }
 .rules__basket {
   float: right;
@@ -174,6 +176,9 @@ body {
   background-color: #63a63e;
   text-align: center;
   width: 150px;
+}
+.header-info {
+  margin-bottom: 39px;
 }
 .header-info__layout {
   margin: 48.5px auto;
@@ -193,9 +198,9 @@ body {
   text-align: left;
 }
 .contacts {
-  float: right;
+  float: left;
   width: 270px;
-  padding: 0 10px;
+  padding: 0 17px;
   padding-right: 42px;
 }
 .contacts__phone {
@@ -205,7 +210,7 @@ body {
   border: 3px solid #ffffff;
 }
 .contacts__address {
-  padding-top: 3px;
+  padding-top: 6px;
   font: normal 14px/24px "CuprumRegular", Arial, sans-serif;
   color: #32425c;
   text-align: center;
@@ -213,18 +218,22 @@ body {
 .auth {
   float: right;
   width: 305px;
+  height: 69px;
 }
 .auth__layout {
-  padding-left: 20px;
+  padding-left: 9px;
 }
 .auth__name {
   display: inline-block;
   vertical-align: top;
   padding-right: 27px;
-  padding: 9.78px 0;
+  padding: 11px 0;
   background-color: #ffffff;
   font: normal 21px/18px "CuprumRegular", Arial, sans-serif;
   color: #000000;
+}
+.auth__name span {
+  padding-right: 34px;
 }
 .auth a {
   display: inline-block;
@@ -237,8 +246,8 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  padding-top: 17.53px;
-  padding-left: 8px;
+  padding-top: 7px;
+  padding-left: 16px;
   height: 35.5px;
   float: left;
 }
@@ -270,12 +279,14 @@ body {
   margin-right: 10px;
   width: 111px;
   text-align: left;
+  padding: 11px 0;
   padding-left: 10px;
 }
 .btn--signup {
   float: right;
   width: 150px;
   text-align: center;
+  padding: 13px 0;
 }
 .btn--show-all {
   padding: 8.83px 0;
@@ -538,6 +549,10 @@ body {
 }
 .slider-price__disc--max {
   left: 159px;
+}
+.slider-price__means {
+  font: normal 17px/18px "PTSansRegular", Arial, sans-serif;
+  color: #000000;
 }
 .slider-price__means-min {
   float: left;

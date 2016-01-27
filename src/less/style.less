@@ -104,7 +104,8 @@ body{
     font-size: 18px;
     line-height: 18px;
     padding: 0;
-    padding-right: 13px;
+    padding-right: 6px;
+    padding-left: 9px;
     
 }
 
@@ -256,7 +257,8 @@ body{
     &__tab{
 
         float: right;
-        width: 160px;        
+        width: 160px; 
+        margin-right: 5px;
         
 
     }
@@ -289,6 +291,8 @@ body{
 }
 
 .header-info{
+    
+    margin-bottom: 39px;
 
     
     &__layout{
@@ -322,11 +326,11 @@ body{
 
 .contacts{
     
-    float: right;
+    float: left;
     
     width: 270px;
-    padding: 0 10px;
-    padding-right: 42px;
+    padding: 0 17px;
+    padding-right: 42px; 
     
     &__phone{
         
@@ -343,7 +347,7 @@ body{
     
     &__address{
         
-        padding-top: 3px;
+        padding-top: 6px;
         
         font: normal ((@font-size-base+1px))/((@line-height)) @font-family-cuprumregular;
         color: @color-blue-dark;        
@@ -358,10 +362,11 @@ body{
     
     float: right;
     width: 305px;
+    height: 69px;
     
     &__layout{
         
-        padding-left: 20px;
+        padding-left: 9px;
         
     }
         
@@ -372,12 +377,18 @@ body{
         vertical-align: top;
         padding-right: 27px;
         
-        padding: 9.78px 0;
+        padding: 11px 0;
         
         background-color: @color-white;
         
         font: normal ((@font-size-base + 8px))/((@line-height - 6px)) @font-family-cuprumregular;
         color: @color-black;
+        
+        span{
+            
+            padding-right: 34px;
+            
+        }
 
         
     }
@@ -402,8 +413,8 @@ body{
         list-style-type: none;
         padding:0;
         margin:0;        
-        padding-top: 17.53px;
-        padding-left: 8px;
+        padding-top: 7px;
+        padding-left: 16px;
         height: 35.5px;
         
         float: left;
@@ -455,7 +466,9 @@ body{
         margin-right: 10px;
         width: 111px;
         text-align: left;
+        padding: 11px 0;
         padding-left: 10px;
+        
         
         
     }
@@ -465,6 +478,7 @@ body{
         float: right;
         width: 150px;
         text-align:center;
+        padding: 13px 0;
         
     }
     
@@ -935,6 +949,13 @@ body{
     &__disc--max{
         
       left: 159px;  
+        
+    }
+    
+    &__means{
+        
+        font: normal ((@font-size-base + 4px))/((@line-height - 6px)) @font-family-ptsansregular;
+        color: @color-black;
         
     }
     
