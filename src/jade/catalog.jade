@@ -39,11 +39,13 @@ html
                         и инструментов для ремонта
                     div.auth.auth--checkin.clearfix   
                         div.auth__layout
-                            a(href="#").auth__name
-                                i.icon-user 
-                                span.auth__name Равшан Джамшутович
-                            a(href="#")
-                                i.icon-logout                                
+                            div.auth__name
+                                a(href="#")
+                                    i.icon-user 
+                                span 
+                                    Равшан Джамшутович
+                                a(href="#")
+                                    i.icon-logout                                
                             ul.auth__menu
                                 li.auth__history 
                                     a(href="#") Мои заказы
@@ -102,6 +104,12 @@ html
                         div.filters__price 
                             p Цена:
                             div.slider-price
+                                div.slider-price__control-panel 
+                                    &nbsp;
+                                    div.slider-price__control-line
+                                    div.slider-price__control-line.slider-price__control-line--active
+                                    div.slider-price__point.slider-price__point--min
+                                    div.slider-price__point.slider-price__point--max
                         div.filter-mans
                             p.filter-mans__header Производители:
                             div.filter-mans__content

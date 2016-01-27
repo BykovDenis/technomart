@@ -361,34 +361,37 @@ body{
     
     &__layout{
         
-        padding-left: 13px;
+        padding-left: 20px;
         
     }
         
-    &--checkin{
-        
-        padding: 9.78px 0;
-        
-        background-color: @color-white;
-        font: normal ((@font-size-base + 8px))/((@line-height - 6px)) @font-family-cuprumregular;
-        color: @color-black;
-        
-    }
     
     &__name{
         
         display: inline-block;
         vertical-align: top;
         padding-right: 27px;
+        
+        padding: 9.78px 0;
+        
+        background-color: @color-white;
+        
+        font: normal ((@font-size-base + 8px))/((@line-height - 6px)) @font-family-cuprumregular;
+        color: @color-black;
+
+        
     }
     
     a{
         
         display: inline-block;
         vertical-align: top;
-       
+               
+        font: normal ((@font-size-base + 8px))/((@line-height - 6px)) @font-family-cuprumregular;
         color: @color-black;
+        
         text-decoration: none;
+        
         
     }
     
@@ -847,6 +850,67 @@ body{
         
     }
 
+    
+}
+
+
+.slider-price{
+    
+    width: 220px;
+    
+    &__control-panel{
+                
+        height: 80px;
+        background-color: @color-yellow2; 
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    &__control-line{
+        
+        position: absolute;
+        top:39px;
+        left:20px;        
+        
+        background-color: @color-gray4;
+        
+        height: 1px;
+        width: 180px;
+        
+    }
+    
+    &__control-line--active{
+        
+        width: 151px;
+        
+        background-color: @color-green2;
+        
+    }
+    
+    &__point{
+        
+        position: absolute;
+        
+        top:37px;
+        width: 4px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: @color-brown1;
+        
+    }
+    
+    &__point--min{
+        
+       left: 20px;
+        
+    }
+    
+    &__point--max{
+        
+      left: 168px;  
+        
+    }
+    
     
 }
 

@@ -215,22 +215,21 @@ body {
   width: 305px;
 }
 .auth__layout {
-  padding-left: 13px;
-}
-.auth--checkin {
-  padding: 9.78px 0;
-  background-color: #ffffff;
-  font: normal 21px/18px "CuprumRegular", Arial, sans-serif;
-  color: #000000;
+  padding-left: 20px;
 }
 .auth__name {
   display: inline-block;
   vertical-align: top;
   padding-right: 27px;
+  padding: 9.78px 0;
+  background-color: #ffffff;
+  font: normal 21px/18px "CuprumRegular", Arial, sans-serif;
+  color: #000000;
 }
 .auth a {
   display: inline-block;
   vertical-align: top;
+  font: normal 21px/18px "CuprumRegular", Arial, sans-serif;
   color: #000000;
   text-decoration: none;
 }
@@ -488,6 +487,41 @@ body {
 }
 .slider__control a {
   color: #ffffff;
+}
+.slider-price {
+  width: 220px;
+}
+.slider-price__control-panel {
+  height: 80px;
+  background-color: #f7f3ec;
+  border-radius: 5px;
+  position: relative;
+}
+.slider-price__control-line {
+  position: absolute;
+  top: 39px;
+  left: 20px;
+  background-color: #d7dcde;
+  height: 1px;
+  width: 180px;
+}
+.slider-price__control-line--active {
+  width: 151px;
+  background-color: #00ca74;
+}
+.slider-price__point {
+  position: absolute;
+  top: 37px;
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ababab;
+}
+.slider-price__point--min {
+  left: 20px;
+}
+.slider-price__point--max {
+  left: 168px;
 }
 .popular--gray {
   background-color: #f2f6f8;
