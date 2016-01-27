@@ -861,16 +861,17 @@ body{
     &__control-panel{
                 
         height: 80px;
+        margin-bottom: 9px;
         background-color: @color-yellow2; 
-        border-radius: 5px;
+        border-radius: 0 0 5px 5px;
         position: relative;
     }
     
     &__control-line{
         
         position: absolute;
-        top:39px;
-        left:20px;        
+        top:42px;
+        left:30px;        
         
         background-color: @color-gray4;
         
@@ -881,27 +882,41 @@ body{
     
     &__control-line--active{
         
-        width: 151px;
+        width: 140px;
         
         background-color: @color-green2;
         
     }
     
+    &__disc{
+        
+        position: absolute;
+        
+        top:32px;
+        width: 21px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: @color-white;
+        box-shadow: 0 2px 0 0 @color-brown2;
+        
+    }    
+    
     &__point{
         
         position: absolute;
         
-        top:37px;
+        top:41px;
         width: 4px;
-        height: 5px;
+        height: 4px;
         border-radius: 50%;
         background-color: @color-brown1;
+        
         
     }
     
     &__point--min{
         
-       left: 20px;
+       left: 30px;
         
     }
     
@@ -910,6 +925,47 @@ body{
       left: 168px;  
         
     }
+    
+    &__disc--min{
+        
+       left: 21px;
+        
+    }
+    
+    &__disc--max{
+        
+      left: 159px;  
+        
+    }
+    
+    &__means-min{
+        
+        float: left;
+        
+        padding: 10px 0;
+        
+        height: 18px;
+        width: 95px;
+        
+        background-color: @color-yellow2; 
+        border-radius: 4px;
+        text-align: center;
+        
+    }
+    
+    &__means-max{
+        
+        float: right;
+        padding: 10px 0;
+        
+        height: 18px;
+        width: 95px;
+        
+        background-color: @color-yellow2;
+        border-radius: 4px;
+        text-align: center;
+        
+    }    
     
     
 }

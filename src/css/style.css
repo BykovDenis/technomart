@@ -493,35 +493,69 @@ body {
 }
 .slider-price__control-panel {
   height: 80px;
+  margin-bottom: 9px;
   background-color: #f7f3ec;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   position: relative;
 }
 .slider-price__control-line {
   position: absolute;
-  top: 39px;
-  left: 20px;
+  top: 42px;
+  left: 30px;
   background-color: #d7dcde;
   height: 1px;
   width: 180px;
 }
 .slider-price__control-line--active {
-  width: 151px;
+  width: 140px;
   background-color: #00ca74;
+}
+.slider-price__disc {
+  position: absolute;
+  top: 32px;
+  width: 21px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 0 0 #d4d1cb;
 }
 .slider-price__point {
   position: absolute;
-  top: 37px;
+  top: 41px;
   width: 4px;
-  height: 5px;
+  height: 4px;
   border-radius: 50%;
   background-color: #ababab;
 }
 .slider-price__point--min {
-  left: 20px;
+  left: 30px;
 }
 .slider-price__point--max {
   left: 168px;
+}
+.slider-price__disc--min {
+  left: 21px;
+}
+.slider-price__disc--max {
+  left: 159px;
+}
+.slider-price__means-min {
+  float: left;
+  padding: 10px 0;
+  height: 18px;
+  width: 95px;
+  background-color: #f7f3ec;
+  border-radius: 4px;
+  text-align: center;
+}
+.slider-price__means-max {
+  float: right;
+  padding: 10px 0;
+  height: 18px;
+  width: 95px;
+  background-color: #f7f3ec;
+  border-radius: 4px;
+  text-align: center;
 }
 .popular--gray {
   background-color: #f2f6f8;
