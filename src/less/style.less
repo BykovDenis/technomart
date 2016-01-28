@@ -1192,6 +1192,8 @@ body{
     
     &__price{
         
+        position: relative;
+        
         padding: 10px 0;
         width: 140px;
         
@@ -1201,12 +1203,49 @@ body{
         
         font: bold ((@font-size-base + 4px))/ ((@line-height - 6px)) @font-family-ptsansbold;
         color: @color-white;
-        background-color: @color-red;
+        
         
 
         border-radius: 5px 0 0 5px;
                 
     }
+    
+    &__price-label{
+        
+        position: absolute;
+        width: 140px;
+        height: 19px;
+        box-sizing:border-box;         
+        
+        background-color: @color-green;
+        z-index: -1;
+        
+    }
+    
+    &__price-label--top{
+        
+       top:0;
+       left:0;
+        
+       border-bottom: 19px solid @color-red;
+       border-right: 19px solid white; 
+
+       border-radius: 5px 0 0 0px;   
+
+    }
+    
+    &__price-label--bottom{
+        
+       bottom:0;
+       left:0;
+        
+       border-top: 19px solid @color-red;
+       border-right: 19px solid white; 
+
+       border-radius: 0 0 0 5px;   
+        
+    }
+    
     
     
 }

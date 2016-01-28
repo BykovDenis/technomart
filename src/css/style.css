@@ -690,14 +690,36 @@ body {
   border-left: 120px solid transparent;
 }
 .goods__price {
+  position: relative;
   padding: 10px 0;
   width: 140px;
   margin: 0 auto;
   margin-bottom: 20px;
   font: bold 17px/18px "PTSansBold", Arial, sans-serif;
   color: #ffffff;
-  background-color: #ee3643;
   border-radius: 5px 0 0 5px;
+}
+.goods__price-label {
+  position: absolute;
+  width: 140px;
+  height: 19px;
+  box-sizing: border-box;
+  background-color: #63a63e;
+  z-index: -1;
+}
+.goods__price-label--top {
+  top: 0;
+  left: 0;
+  border-bottom: 19px solid #ee3643;
+  border-right: 19px solid white;
+  border-radius: 5px 0 0 0px;
+}
+.goods__price-label--bottom {
+  bottom: 0;
+  left: 0;
+  border-top: 19px solid #ee3643;
+  border-right: 19px solid white;
+  border-radius: 0 0 0 5px;
 }
 .brands__layout {
   margin: 0 auto;
