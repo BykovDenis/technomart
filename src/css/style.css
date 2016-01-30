@@ -394,6 +394,7 @@ body {
   width: 300px;
 }
 .banner-card-goods {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 300px;
@@ -406,6 +407,18 @@ body {
 .banner-card-goods__layout {
   margin: 0 43px 26px 25px;
   padding: 0;
+}
+.banner-card-goods__new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: 59px;
+  background: url(../img/img_new.png) 2px 0 no-repeat;
+  background-size: 60px 59px;
 }
 .banner-card-goods:last-of-type {
   margin-right: 0;
@@ -594,7 +607,7 @@ body {
   float: left;
   margin: 0;
   padding: 29.5px 0;
-  padding-left: 30px;
+  padding-left: 29px;
 }
 .popular__title--about {
   padding-left: 0;
@@ -631,8 +644,8 @@ body {
 }
 .btn-lnk--popular {
   float: right;
-  margin: 26.5px 0;
-  margin-right: 24px;
+  margin: 25.5px 0;
+  margin-right: 22px;
   width: 230px;
 }
 .btn-lnk--information {
@@ -650,17 +663,30 @@ body {
   margin-left: 0;
   display: inline-block;
   vertical-align: top;
+  position: relative;
 }
 .goods:last-of-type {
   margin-right: 0;
 }
 .goods__layout {
-  padding: 0 28px 0 31px;
+  padding: 0 24px 0 28px;
+}
+.goods__new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: 59px;
+  background: url(../img/img_new.png) 2px 0 no-repeat;
+  background-size: 60px 59px;
 }
 .goods__image {
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
   height: 164px;
   position: relative;
 }
@@ -674,7 +700,7 @@ body {
   font: bold 18px / 20px "PTSansBold", Arial, sans-serif;
   color: #000000;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .goods__price-old {
   font: bold 17px/18px "PTSansBold", Arial, sans-serif;
@@ -737,7 +763,7 @@ body {
   float: left;
   margin: 0;
   padding: 29.5px 0;
-  padding-left: 30px;
+  padding-left: 25px;
 }
 .brands__items {
   text-align: center;
@@ -777,12 +803,11 @@ body {
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  margin-bottom: 67px;
 }
 .service__header h2 {
   margin: 0;
-  margin-top: 64px;
-  margin-bottom: 28px;
+  margin-top: 66px;
+  margin-bottom: 30px;
   font: normal 30px / 24px "CuprumRegular", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -801,12 +826,31 @@ body {
   margin-right: 65px;
   margin-bottom: 102px;
   width: 240px;
+  position: relative;
+}
+.service__items ul {
+  margin: 0;
+  margin-top: 68px;
+  padding: 0;
   font: bold 21px / 30px "CuprumBold", Arial, sans-serif;
   list-style-type: none;
+}
+.service__border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  height: 297px;
+  background: url(../img/img-border-right.png) 0 25px no-repeat;
+  backgound-size: 10px 272px;
+  z-index: 100;
 }
 .service__about {
   float: right;
   width: 620px;
+  padding-top: 68px;
 }
 .service__about img {
   float: right;
@@ -814,6 +858,8 @@ body {
 }
 .service__col1 {
   float: left;
+  position: relative;
+  width: 620px;
 }
 .service__col1 h4 {
   max-width: 300px;
@@ -821,15 +867,21 @@ body {
   color: #32425c;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 31px;
+  padding-top: 5px;
 }
 .service__col1 p {
   width: 300px;
   font: normal 13px/24px "PTSansRegular", Arial, sans-serif;
   color: #000000;
 }
-.service__col2 {
-  float: right;
+.service__col1 img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+  width: 468px;
+  height: 261px;
 }
 .information {
   margin: 83px 0;
@@ -848,7 +900,7 @@ body {
 }
 .information__header {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
   font: normal 30px/24px "CuprumRegular", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -1117,7 +1169,8 @@ body {
   float: right;
   margin: 0;
   padding: 0;
-  margin: 36px 0;
+  margin-top: 39px;
+  margin-bottom: 34px;
   font-size: 0;
 }
 .main-footer__menu li {
@@ -1176,7 +1229,7 @@ body {
   position: relative;
   width: 40px;
   height: 40px;
-  margin-right: 4.5px;
+  margin-right: 2.4px;
   background-color: #212a3a;
   border-radius: 50%;
 }

@@ -74,6 +74,7 @@ html
                 div.top-block__layout
                     div.top-block__row1                
                         div.banner-card-goods.banner-card-goods--yellow
+                            div.banner-card-goods__new
                             div.banner-card-goods__layout
                                 div.banner-card-goods__content
                                     h3.banner-card-goods__header Материалы
@@ -159,6 +160,7 @@ html
                                     div.goods__price-label.goods__price-label--top
                                     div.goods__price-label.goods__price-label--bottom                                        
                         div.goods   
+                            div.goods__new
                             div.goods__image
                                 img(src="img/img_bosch_bfg2000.jpg" width="127" height="112")
                             div.goods__layout
@@ -209,24 +211,26 @@ html
                                 
                         div.service__content.clearfix
                             
-                            ul.service__items
-                                li.service__item.service__item--active 
-                                    button.btn__service.btn__service--active Доставка
-                                li.service__item 
-                                    button.btn__service Гарантия
-                                li.service__item 
-                                    button.btn__service Кредит
-                                
+                            div.service__items
+                                div.service__border
+                                ul                            
+                                    li.service__item.service__item--active 
+                                        button.btn__service.btn__service--active Доставка
+                                    li.service__item 
+                                        button.btn__service Гарантия
+                                    li.service__item 
+                                        button.btn__service Кредит
+
                             div.service__about 
                                 div.service__col1
                                     h4 Доставка
                                     p. 
-                                        Мы с удовольствием доставим ваш товар прямо 
+                                        Мы с удовольствием доставим ваш товар прямо<br> 
                                         к вашему подъезду совершенно бесплатно! <br>
                                         Ведь мы неплохо заработаем, <br> 
                                         поднимая его на ваш на этаж!
-                                div.service__col2
-                                    img(src="img/img_delivery_car.png" alt="Доставка")
+                                    img(src="img/img_delivery_car.png" width="468" height="261" alt="Доставка")
+                                
                                     
                div.information
                     div.information__layout.clearfix

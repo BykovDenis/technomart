@@ -678,6 +678,8 @@ body{
 
 .banner-card-goods{
     
+    position: relative;
+    
     display: inline-block;
     vertical-align: top;
     
@@ -695,7 +697,25 @@ body{
         margin: 0 43px 26px 25px;
         padding: 0;
         
-    }    
+    }   
+    
+    &__new{
+    
+        position: absolute;
+        top:0;
+        right:0;
+        
+        z-index: 100;
+        
+        display: inline-block;
+        vertical-align: top;
+        width: 60px;
+        height: 59px;
+        
+        background: url(../img/img_new.png) 2px 0 no-repeat;
+        background-size: 60px 59px;
+        
+    }
     
     &:last-of-type{
         
@@ -1029,7 +1049,7 @@ body{
         float: left;  
         margin: 0;
         padding: 29.5px 0;
-        padding-left: 30px;        
+        padding-left: 29px;        
        
     }
     
@@ -1093,8 +1113,8 @@ body{
     &--popular{
         
         float: right;
-        margin: 26.5px 0;
-        margin-right: 24px;
+        margin: 25.5px 0;
+        margin-right: 22px;
         width: 230px
         
     }
@@ -1124,6 +1144,8 @@ body{
     margin-left:0;
     display: inline-block;
     vertical-align: top;
+    position: relative;
+    
 
     
     &:last-of-type{
@@ -1134,7 +1156,25 @@ body{
     
     &__layout{
         
-        padding: 0 28px 0 31px;        
+        padding: 0 24px 0 28px;        
+        
+    }
+    
+    &__new{
+    
+        position: absolute;
+        top:0;
+        right:0;
+        
+        z-index: 100;
+        
+        display: inline-block;
+        vertical-align: top;
+        width: 60px;
+        height: 59px;
+        
+        background: url(../img/img_new.png) 2px 0 no-repeat;
+        background-size: 60px 59px;
         
     }
     
@@ -1142,7 +1182,7 @@ body{
         
         text-align: center;
         margin: 0 auto;
-        margin-bottom: 6px; 
+        margin-bottom: 15px; 
         height: 164px;
         position: relative;
         
@@ -1164,7 +1204,7 @@ body{
         font: bold ((@font-size-base + 5px)) / (( @line-height - 4px)) @font-family-ptsansbold;
         color: @color-black;
         margin: 0;  
-        margin-bottom: 16px;
+        margin-bottom: 10px;
         
     }
     
@@ -1275,7 +1315,7 @@ body{
         float: left;  
         margin: 0;
         padding: 29.5px 0;
-        padding-left: 30px;
+        padding-left: 25px;
     }
     
     &__items{
@@ -1336,14 +1376,14 @@ body{
         display: inline-block;
         vertical-align: top;       
         text-align: left;     
-        margin-bottom: 67px;
+        
         
         h2{
             
             margin: 0;
         
-            margin-top: 64px;
-            margin-bottom: 28px;
+            margin-top: 66px;
+            margin-bottom: 30px;
             
             font: normal @font-size-h2 / @line-height @font-family-cuprumregular;
             color: @color-black;
@@ -1366,7 +1406,7 @@ body{
         
     }
     
-    &__items{
+    &__items{      
         
         
         float: left;
@@ -1375,17 +1415,47 @@ body{
         margin-right: 65px;
         margin-bottom: 102px;
         width: 240px;
+        position: relative;
         
-        font: bold ((@font-size-base + 8px)) / ((@line-height + 6px)) @font-family-cuprumbold;
-        list-style-type: none;
-        
+        ul{
+            
+            margin:0;   
+            margin-top: 68px;
+            padding:0;
+            
+            
+            font: bold ((@font-size-base + 8px)) / ((@line-height + 6px)) @font-family-cuprumbold;
+            list-style-type: none;            
+        }
                 
     }
+    
+    &__border{
+        
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        display: inline-block;
+        vertical-align: top;
+        
+        width: 10px;
+        height: 297px;
+        
+        background: url(../img/img-border-right.png) 0 25px no-repeat;
+        backgound-size: 10px 272px;
+        
+        z-index: 100;
+        
+    }
+        
+    
     
     &__about{
         
         float: right;
-        width : 620px;        
+        width : 620px;  
+        padding-top: 68px;
 
         
         img{
@@ -1400,6 +1470,8 @@ body{
     &__col1{
         
         float:left;
+        position: relative;
+        width: 620px;
             
         h4{
             
@@ -1409,7 +1481,8 @@ body{
             color: @color-blue-dark;
             text-transform: uppercase;
             margin:0;
-            margin-bottom: 41px;
+            margin-bottom: 31px;
+            padding-top: 5px;
             
         }
         
@@ -1421,13 +1494,21 @@ body{
             color: @color-black;
         
         }
+        
+        img{
+            
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 100;
+            
+            width: 468px;
+            height: 261px;
+            
+            
+        }
     }
     
-    &__col2{
-        
-        float: right;
-        
-    }
     
 }
 
@@ -1460,7 +1541,7 @@ body{
     &__header{
         
         margin:0;
-        margin-bottom: 29px;
+        margin-bottom: 28px;
         
         font: normal @font-size-h2/@line-height @font-family-cuprumregular;
         color: @color-black;
@@ -1931,7 +2012,8 @@ body{
         float: right;
         margin: 0;
         padding: 0;       
-        margin: 36px 0;
+        margin-top: 39px;
+        margin-bottom: 34px;
         
         font-size: 0;
         
@@ -2034,7 +2116,7 @@ body{
             
             width: 40px;
             height: 40px;
-            margin-right: 4.5px;
+            margin-right: 2.4px;
             
             background-color: @color-blue-dark2;
             border-radius: 50%;
