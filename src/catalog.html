@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog">
+      <form name="filters" method="get" action="catalog.html" class="catalog">
         <div class="catalog__layout clearfix">                   
           <div class="filters">
             <div class="filters__header">Фильтр:</div>
@@ -112,8 +112,12 @@
                   <div class="slider-price__point slider-price__point--max"></div>
                 </div>
                 <div class="slider-price__means">
-                  <div class="slider-price__means-min">   0</div>
-                  <div class="slider-price__means-max">   30000</div>
+                  <div class="slider-price__means-min">
+                    <input type="text" name="price_min" value="0" width="100%"/>
+                  </div>
+                  <div class="slider-price__means-max">
+                    <input type="text" name="price_max" value="30000" width="100%"/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -170,6 +174,7 @@
                 </div>
               </div>
               <div class="goods"> 
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
                 <div class="goods__new"></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg2000.jpg" width="127" height="112"/></div>
                 <div class="goods__layout">
@@ -260,7 +265,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </form>
       <div class="popular popular--gray">           
         <div class="popular__layout clearfix">                   
           <h2 class="popular__title popular__title--about">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>

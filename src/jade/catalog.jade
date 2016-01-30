@@ -98,7 +98,7 @@ html
                 div.popular__layout.clearfix
                     div.popular__header--goods-name.clearfix
                         h2.popular__title Перфораторы  
-            div.catalog
+            form(name="filters" method="get" action="catalog.html").catalog
                 div.catalog__layout.clearfix                    
                     div.filters
                         div.filters__header Фильтр:
@@ -114,8 +114,10 @@ html
                                     div.slider-price__point.slider-price__point--min
                                     div.slider-price__point.slider-price__point--max
                                 div.slider-price__means
-                                    div.slider-price__means-min    0
-                                    div.slider-price__means-max    30000
+                                    div.slider-price__means-min
+                                        input(type="text" name="price_min" value="0" width="100%")
+                                    div.slider-price__means-max
+                                        input(type="text" name="price_max" value="30000" width="100%")
                         div.filter-mans
                             p.filter-mans__header Производители:
                             div.filter-mans__content
@@ -176,6 +178,10 @@ html
                                         div.goods__price-label.goods__price-label--top
                                         div.goods__price-label.goods__price-label--bottom                                            
                             div.goods 
+                                div.goods-active
+                                    i.icon-basket
+                                    a(href="#").goods-active__buy Купить
+                                    a(href="#").goods-active__tab В закладки
                                 div.goods__new
                                 div.goods__image
                                     img(src="img/img_bosch_bfg2000.jpg" width="127" height="112")

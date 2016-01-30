@@ -43,6 +43,7 @@
 body {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 .icon-search,
 .icon-bookmark,
@@ -289,7 +290,7 @@ body {
   padding: 13px 0;
 }
 .btn--show-all {
-  padding: 8.83px 0;
+  padding: 6px 0;
   width: 140px;
   text-align: center;
   text-transform: uppercase;
@@ -405,7 +406,7 @@ body {
   color: #ffffff;
 }
 .banner-card-goods__layout {
-  margin: 0 43px 26px 25px;
+  margin: 0 27px 26px 25px;
   padding: 0;
 }
 .banner-card-goods__new {
@@ -453,11 +454,20 @@ body {
   border: 1px solid transparent;
   border-radius: 5px;
 }
-.banner-card-goods__image {
+.banner-card-goods__img {
   float: right;
   display: block;
-  padding-top: 27px;
-  padding-bottom: 31px;
+  padding-top: 31px;
+  padding-bottom: 20px;
+  width: 78px;
+  height: 75px;
+  text-align: right;
+}
+.banner-card-goods__img--matherial {
+  padding-right: 16px;
+}
+.banner-card-goods__img--discount {
+  padding-right: 12px;
 }
 .slider {
   width: 622px;
@@ -494,13 +504,15 @@ body {
 .slider__header {
   width: 622px;
   background-color: rgba(0, 0, 0, 0.3);
+  background: url(../img/img_slider_shadow.png) 0 0 no-repeat;
   padding: 25px 0 23px 0;
   margin-bottom: 10px;
 }
 .slider__title {
   margin: 0;
   text-transform: uppercase;
-  font: bold 36px / 33px "CuprumBold", Arial, sans-serif;
+  font: bold 36px / 30px "CuprumBold", Arial, sans-serif;
+  margin-bottom: 7px;
 }
 .slider__content {
   font: normal 18px / 24px "PTSansRegular", Arial, sans-serif;
@@ -569,21 +581,43 @@ body {
 }
 .slider-price__means-min {
   float: left;
-  padding: 10px 0;
+  padding: 7px 0 13px 0;
   height: 18px;
   width: 95px;
   background-color: #f7f3ec;
   border-radius: 4px;
   text-align: center;
 }
+.slider-price__means-min input {
+  padding-left: 10px;
+  background: none;
+  border: 0;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.slider-price__means-min input:active {
+  border: none;
+}
 .slider-price__means-max {
   float: right;
-  padding: 10px 0;
+  padding: 7px 0 13px 0;
   height: 18px;
   width: 95px;
   background-color: #f7f3ec;
   border-radius: 4px;
   text-align: center;
+}
+.slider-price__means-max input {
+  padding-left: 10px;
+  background: none;
+  border: 0;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.slider-price__means-max input:focus {
+  border: none;
 }
 .popular--gray {
   background-color: #f2f6f8;
@@ -612,7 +646,7 @@ body {
 .popular__title--about {
   padding-left: 0;
   padding-top: 65px;
-  padding-bottom: 26.9px;
+  padding-bottom: 24px;
 }
 .popular__items {
   text-align: center;
@@ -693,8 +727,8 @@ body {
 .goods__image img {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 38px;
+  transform: translateY(-50%);
 }
 .goods__title {
   font: bold 18px / 20px "PTSansBold", Arial, sans-serif;
@@ -746,6 +780,50 @@ body {
   border-top: 19px solid #ee3643;
   border-right: 19px solid white;
   border-radius: 0 0 0 5px;
+}
+.goods-active {
+  position: absolute;
+  top: 29px;
+  left: 43px;
+  background-color: #ffffff;
+  width: 144px;
+  padding: 15px 0;
+  z-index: 200;
+}
+.goods-active .icon-basket {
+  padding: 9px 0;
+  padding-left: 8px;
+  padding-right: 17px;
+  font-size: 17px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: .3;
+}
+.goods-active__buy {
+  display: block;
+  padding: 9.5px 0;
+  margin-bottom: 8px;
+  width: 135px;
+  background: #63a63e;
+  font: normal 14px / 16px "CuprumRegular", Arial, sans-serif;
+  color: #ffffff;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 3px solid #367315;
+  border-radius: 3px;
+}
+.goods-active__tab {
+  display: block;
+  padding: 8px 0;
+  width: 129px;
+  text-align: center;
+  font: normal 14px / 16px "CuprumRegular", Arial, sans-serif;
+  color: #32425c;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #63a63e;
+  border-radius: 3px;
 }
 .brands__layout {
   margin: 0 auto;
@@ -950,8 +1028,10 @@ body {
 }
 .filters__header {
   margin: 0;
-  padding: 9.5px 0;
-  padding-left: 17px;
+  pading: 0;
+  padding-top: 10.5px;
+  padding-bottom: 9px;
+  padding-left: 20px;
   background-color: #f7f3ec;
   border-radius: 3px;
   font: normal 13px / 18px "PTSansRegular", Arial, sans-serif;
@@ -964,7 +1044,7 @@ body {
 }
 .filters__price p {
   margin: 0;
-  padding: 12.27px 0;
+  padding: 12px 0;
   font: bold 17px/30px "PTSansBold", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -1062,10 +1142,10 @@ body {
   float: right;
   font-size: 0;
   padding: 2.5px 0;
-  margin-right: 37.72px;
+  margin-right: 32px;
 }
 .catalog-items__sort {
-  padding: 5.5px 0;
+  padding: 7px 0;
   background-color: #f7f3ec;
   padding-left: 19px;
   padding-right: 5px;
@@ -1119,7 +1199,7 @@ body {
 /* Панель пагинации */
 .paginator {
   float: left;
-  margin: 52px 0 56px 0;
+  margin: 48px 0 59px 0;
 }
 .paginator__menu {
   text-align: left;

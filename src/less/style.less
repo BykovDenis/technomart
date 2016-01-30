@@ -61,6 +61,7 @@ body{
     
     width: @width-body;
     margin: 0 auto;
+    padding: 0 10px;
     
 }
 
@@ -484,7 +485,7 @@ body{
     
     &--show-all{
         
-        padding: 8.83px 0;
+        padding: 6px 0;
         
         
         width: 140px;
@@ -694,7 +695,7 @@ body{
     
     &__layout{
        
-        margin: 0 43px 26px 25px;
+        margin: 0 27px 26px 25px;
         padding: 0;
         
     }   
@@ -716,6 +717,7 @@ body{
         background-size: 60px 59px;
         
     }
+
     
     &:last-of-type{
         
@@ -779,15 +781,33 @@ body{
         
     }
     
-    &__image{
+    &__img{
         
         float: right;
         display: block;
         
-        padding-top: 27px;
-        padding-bottom: 31px;            
+        padding-top: 31px;
+        padding-bottom: 20px;  
+        
+        width: 78px;
+        height: 75px;
+        
+        text-align: right;
+        
+    }    
+    
+    &__img--matherial{
+        
+        padding-right:16px;
         
     }
+    
+    &__img--discount{
+        
+        padding-right:12px;
+        
+    }    
+    
     
 }
 
@@ -849,6 +869,7 @@ body{
         width: 622px;
     
         background-color: rgba(0,0,0, 0.3);
+        background: url(../img/img_slider_shadow.png) 0 0 no-repeat;
         padding: 25px 0 23px 0;
         
         margin-bottom: 10px;
@@ -861,7 +882,8 @@ body{
         margin:0;
         
         text-transform: uppercase;
-        font: bold @font-size-h4 / ((@line-height + 9px)) @font-family-cuprumbold;         
+        font: bold @font-size-h4 / ((@line-height + 6px)) @font-family-cuprumbold;         
+        margin-bottom: 7px;
             
     }
     
@@ -975,7 +997,7 @@ body{
     &__means{
         
         font: normal ((@font-size-base + 4px))/((@line-height - 6px)) @font-family-ptsansregular;
-        color: @color-black;
+        color: @color-black;        
         
     }
     
@@ -983,21 +1005,40 @@ body{
         
         float: left;
         
-        padding: 10px 0;
+        padding: 7px 0 13px 0;
         
         height: 18px;
         width: 95px;
         
         background-color: @color-yellow2; 
         border-radius: 4px;
-        text-align: center;
+        text-align: center;   
+        
+        input{
+            
+            padding-left:10px;
+            
+            background: none;
+            border:0;
+            width: 100%;
+            text-align: center;
+            
+            box-sizing: border-box;
+            
+        }       
+        
+        input:active{
+            
+            border:none;
+            
+        }        
         
     }
     
     &__means-max{
         
         float: right;
-        padding: 10px 0;
+        padding: 7px 0 13px 0;
         
         height: 18px;
         width: 95px;
@@ -1005,6 +1046,25 @@ body{
         background-color: @color-yellow2;
         border-radius: 4px;
         text-align: center;
+        
+        input{
+            
+            padding-left:10px;
+            
+            background: none;
+            border:0;
+            width: 100%;
+            text-align: center; 
+            
+            box-sizing: border-box;
+            
+        }   
+        
+        input:focus{
+            
+            border:none;
+            
+        }
         
     }    
     
@@ -1057,7 +1117,7 @@ body{
                 
         padding-left:0;
         padding-top: 65px;
-        padding-bottom: 26.9px;
+        padding-bottom: 24px;
     }
     
     &__items{
@@ -1160,6 +1220,7 @@ body{
         
     }
     
+
     &__new{
     
         position: absolute;
@@ -1190,8 +1251,8 @@ body{
             
             position: absolute; 
             top:50%;
-            left:50%;
-            transform: translate(-50%, -50%);
+            left:38px;
+            transform: translateY(-50%);
             
             
         }
@@ -1286,10 +1347,78 @@ body{
         
     }
     
-    
+
     
 }
 
+
+.goods-active{
+    
+    position: absolute;
+    top: 29px;
+    left: 43px; 
+    
+    background-color: @color-white;
+    width: 144px;
+    padding: 15px 0;
+    
+    & .icon-basket{
+        
+        padding:9px 0;
+        padding-left: 8px;
+        padding-right: 17px;
+        
+        
+        font-size: ((@font-size-base + 4px));        
+        line-height: ((@line-height - 8px));
+        color: @color-white;
+        opacity: .3;
+        
+    }
+    
+    &__buy{
+        
+        display: block;
+        padding: 9.5px 0;
+        margin-bottom:8px;
+        
+        width: 135px;
+        
+        background: @color-green;        
+        font: normal  ((@font-size-base + 1px)) / ((@line-height - 8px)) @font-family-cuprumregular; 
+        color: @color-white;
+        text-align: left;
+        text-decoration: none;
+        text-transform: uppercase;
+        
+        border-bottom: 3px solid @color-green-dark;
+        border-radius: 3px;      
+        
+    }
+    
+    &__tab{
+        
+        
+        display: block;
+        padding: 8px 0;
+        
+        width: 129px;
+        
+        text-align: center;
+        font: normal  ((@font-size-base + 1px)) / ((@line-height - 8px)) @font-family-cuprumregular; 
+        color: @color-blue-dark;
+        text-decoration: none;
+        text-transform: uppercase;
+        
+        border: 3px solid @color-green;
+        border-radius: 3px;
+        
+    }
+    
+    z-index: 200;
+    
+    
+}
 
 .brands{
     
@@ -1631,8 +1760,10 @@ body{
     &__header{
         
         margin:0;
-        padding: 9.5px 0;
-        padding-left: 17px;
+        pading: 0;
+        padding-top: 10.5px;
+        padding-bottom: 9px;
+        padding-left: 20px;
         
         background-color: @color-yellow2;
         border-radius: 3px;  
@@ -1652,7 +1783,7 @@ body{
         p{
 
             margin: 0;
-            padding: 12.27px 0;        
+            padding: 12px 0;              
 
             font: bold ((@font-size-base + 4px))/ ((@line-height + 6px)) @font-family-ptsansbold;
             color: @color-black;
@@ -1820,13 +1951,13 @@ body{
         float: right;
         font-size: 0;
         padding: 2.5px 0;
-        margin-right: 37.72px;
+        margin-right: 32px;
                 
     }
     
     &__sort{
         
-        padding: 5.5px 0;   
+        padding: 7px 0;   
         background-color: @color-yellow2;     
         
         padding-left: 19px;
@@ -1925,7 +2056,7 @@ body{
 .paginator{
     
     float: left;
-    margin: 52px 0 56px 0;
+    margin: 48px 0 59px 0;
     
     &__menu  {
         
