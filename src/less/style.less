@@ -92,6 +92,16 @@ body{
     
 }
 
+.icon-search{
+    
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    
+    z-index:100;
+    
+}
+
 .icon-home{
     
     font-size: @font-size-base + 3px;
@@ -118,7 +128,7 @@ body{
 
 .icon-bookmark{
     
-    padding-left: 27px;
+    padding-left: 12px;
     padding-right: 10px;
     
 }
@@ -231,6 +241,13 @@ body{
     padding: 0;
     margin: 0;
     
+    li:first-of-type{
+        
+        position: relative;
+        float:left;
+        
+    }
+    
 
     a{        
         
@@ -248,17 +265,24 @@ body{
 
     &__search{
 
-        float: left;        
+           
         text-align: left;
-        margin-left:14px;
-        width: 150px;
+        padding: 12px 0;
+        padding-left:50px;
+        width: 270px;
+        box-sizing: border-box;
+        border: 0;
+        background-color: @color-blue;
+        
+        font: normal ((@font-size-base+4px))/ ((@line-height - 6px)) @font-family-cuprumregular;
+        color: @color-white;          
 
     }
 
     &__tab{
 
         float: right;
-        width: 160px; 
+        width: 145px; 
         margin-right: 5px;
         
 

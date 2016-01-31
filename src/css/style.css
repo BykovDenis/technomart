@@ -58,6 +58,12 @@ body {
   float: left;
   padding-right: 12.5px;
 }
+.icon-search {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  z-index: 100;
+}
 .icon-home {
   font-size: 16px;
   line-height: 20px;
@@ -74,7 +80,7 @@ body {
   padding-left: 14px;
 }
 .icon-bookmark {
-  padding-left: 27px;
+  padding-left: 12px;
   padding-right: 10px;
 }
 .icon-login,
@@ -146,6 +152,10 @@ body {
   padding: 0;
   margin: 0;
 }
+.rules li:first-of-type {
+  position: relative;
+  float: left;
+}
 .rules a {
   color: #ffffff;
   text-decoration: none;
@@ -154,14 +164,19 @@ body {
   padding: 12px 0;
 }
 .rules__search {
-  float: left;
   text-align: left;
-  margin-left: 14px;
-  width: 150px;
+  padding: 12px 0;
+  padding-left: 50px;
+  width: 270px;
+  box-sizing: border-box;
+  border: 0;
+  background-color: #293449;
+  font: normal 17px/18px "CuprumRegular", Arial, sans-serif;
+  color: #ffffff;
 }
 .rules__tab {
   float: right;
-  width: 160px;
+  width: 145px;
   margin-right: 5px;
 }
 .rules__basket {
