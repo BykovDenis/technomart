@@ -10,8 +10,8 @@
   <body> 
     <header class="main-header">
       <div class="top-menu clearfix">
-        <div class="top-menu__layout"><a href="index.html"></a>
-          <h1 class="top-menu logo">ТЕХНОМАРТ</h1>
+        <div class="top-menu__layout"><a href="index.html">
+            <h1 class="top-menu logo">ТЕХНОМАРТ</h1></a>
           <ul class="rules clearfix">
             <li>
               <input type="text" placeholder="Поиск:" name="search" class="rules__search"/><i class="icon-search">   </i>
@@ -19,12 +19,8 @@
             <li>
               <div class="rules__issue-order"> <a href="#">Оформить заказ                    </a></div>
             </li>
-            <li>
-              <div class="rules__basket rules__basket--added"> <i class="icon-basket"></i>Корзина:                <span class="basket__count">10</span></div>
-            </li>
-            <li>
-              <div class="rules__tab"> <i class="icon-bookmark"></i>Закладки:                 <span class="tab__count">0</span></div>
-            </li>
+            <li><a class="rules__basket rules__basket--added"> <i class="icon-basket"></i>Корзина:                <span class="basket__count">10</span></a></li>
+            <li><a class="rules__tab"> <i class="icon-bookmark"></i>Закладки:                 <span class="tab__count">0</span></a></li>
           </ul>
         </div>
       </div>
@@ -44,9 +40,9 @@
           </div>
           <div class="auth auth--checkin clearfix">   
             <div class="auth__layout">
-              <div class="auth__name"><a href="#"><i class="icon-user"> </i></a><span>
-                   
-                  Равшан Джамшутович</span><a href="#"><i class="icon-logout">                               </i></a></div>
+              <div class="auth__name"><a href="#"><i class="icon-user"> </i><span>
+                     
+                    Равшан Джамшутович</span></a><a href="#"><i class="icon-logout">                               </i></a></div>
               <ul class="auth__menu">
                 <li class="auth__history"> <a href="#">Мои заказы</a></li>
                 <li class="auth__profile"> <a href="#">Личный кабинет                        </a></li>
@@ -173,8 +169,9 @@
                 <li> <a href="#">По функционалу</a></li>
               </ul>
             </div>
-            <div class="catalog-items__goods">
+            <div class="catalog-items__goods">                      
               <div class="goods"> 
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки </a></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg3000.jpg" width="127" height="112"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 3000</p>
@@ -185,7 +182,8 @@
                   </div>
                 </div>
               </div>
-              <div class="goods">  
+              <div class="goods"> 
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки                          </a></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg6000.jpg" width="144" height="128"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 6000</p>
@@ -210,6 +208,7 @@
                 </div>
               </div>
               <div class="goods"> 
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg3000.jpg" width="127" height="112"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 3000</p>
@@ -221,6 +220,7 @@
                 </div>
               </div>
               <div class="goods">  
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
                 <div class="goods__new"></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg6000.jpg" width="144" height="128"/></div>
                 <div class="goods__layout">
@@ -232,7 +232,8 @@
                   </div>
                 </div>
               </div>
-              <div class="goods">  
+              <div class="goods"> 
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg2000.jpg" width="127" height="112"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 2000</p>
@@ -244,6 +245,7 @@
                 </div>
               </div>
               <div class="goods"> 
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
                 <div class="goods__new"></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg3000.jpg" width="127" height="112"/></div>
                 <div class="goods__layout">
@@ -256,6 +258,7 @@
                 </div>
               </div>
               <div class="goods">  
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg6000.jpg" width="144" height="128"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 6000</p>
@@ -267,6 +270,7 @@
                 </div>
               </div>
               <div class="goods">  
+                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg2000.jpg" width="127" height="112"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 2000</p>
