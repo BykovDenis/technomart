@@ -1356,11 +1356,12 @@ body{
     
     position: absolute;
     top: 29px;
-    left: 43px; 
+    left: 38px; 
     
     background-color: @color-white;
     width: 144px;
     padding: 15px 0;
+    padding-left:5px;
     
     & .icon-basket{
         
@@ -1797,12 +1798,19 @@ body{
 .filter-mans{
     
     border-bottom: 1px solid @color-gray;
+    
+    li{
+        
+        margin-bottom: 12px;
+        
+    }
 
     
     &__header{
         
         margin: 0;
-        padding: 14.25px 0;  
+        padding:0;
+        padding-top: 14.25px;  
         
         font: bold ((@font-size-base + 4px))/ ((@line-height + 6px)) @font-family-ptsansbold;
         color: @color-black;
@@ -1814,43 +1822,52 @@ body{
         
         list-style-type: none;
         font-size: 0;
+        padding: 0;       
+    
+    }
+    
+    &__label{
         
-            a{
-
-                display: inline-block;
-                vertical-align: top;
-                font: normal ((@font-size-base + 2px))/ ((@line-height - 4px)) @font-family-ptsansregular;
-                color: @color-black;
-                text-transform: uppercase;
-                text-decoration: none;
-                padding:3px 0;
-                
-
-            }        
-
+        font: normal ((@font-size-base + 2px))/ ((@line-height - 4px)) @font-family-ptsansregular;
+        color: @color-black;
+        text-transform: uppercase;  
+        padding: 3px 0;
+        
     }
-    
-    &__item:before{
-
-        font: normal 28px/28px 'symbols-technomart';
-        content: '\2610';
-        opacity: .3;
-        padding-right: 13px; 
-
-    }
-    
-    &__item--active:before{
-
-        content: '\2611';
-
-    }    
     
 
     &__item{
 
-        margin-bottom: 12px;   
-
+        display: none;
+        
     } 
+
+    
+    &__item + &__label:before{
+        
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+        
+    padding-right: 7px; 
+    width: 28px;
+    height: 28px;
+   
+    font: normal 28px/28px 'symbols-technomart';
+    content: '\2610';
+    opacity: .3;
+        
+    }
+    
+    &__item:checked + &__label:before{
+        
+        font: normal 28px/28px 'symbols-technomart';
+        content: '\2611';
+        opacity: .3;
+    
+        
+    }
+    
     
     &__item:last-of-type{
     
@@ -1864,6 +1881,14 @@ body{
     
     border-bottom: 1px solid @color-gray;
     margin-bottom: 62px;
+    
+    li{
+        
+        margin-bottom: 12px;  
+        
+    }
+    
+    
     
     &__header{
         
@@ -1881,40 +1906,55 @@ body{
         
         list-style-type: none;
         font-size: 0;
-  
-        
-            a{
-
-
-                font: normal ((@font-size-base + 2px))/ ((@line-height - 4px)) @font-family-ptsansregular;
-                color: @color-black;
-                text-transform: uppercase;
-                text-decoration: none;
-
-            }
+        padding: 0;  
         
     }
     
-       &__item:before{
+    &__label{
+        
+        font: normal ((@font-size-base + 2px))/ ((@line-height - 4px)) @font-family-ptsansregular;
+        color: @color-black;
+        text-transform: uppercase;  
+        padding: 3px 0;
+        
+    }    
+    
 
-            font: normal 28px/28px 'symbols-technomart';
-            content: '\25cb';
-            opacity: .3;
-            padding-right: 13px; 
+    &__item{
 
-        }
+       display: none;  
 
-        &__item{
+    } 
 
-            margin-bottom: 12px;   
+    &__item--active:before{
 
-        } 
+        content: '\25cf';
 
-        &__item--active:before{
+    }     
 
-            content: '\25cf';
+    &__item + &__label:before{
 
-        }     
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+
+    padding-right: 7px; 
+    width: 28px;
+    height: 28px;
+
+    font: normal 28px/28px 'symbols-technomart';
+    content: '\25cb';
+    opacity: .3;
+
+    }
+
+    &__item:checked + &__label:before{
+
+        font: normal 28px/28px 'symbols-technomart';
+        content: '\25cf';
+        opacity: .3;
+
+    }    
     
 }
 

@@ -120,26 +120,32 @@ html
                                         input(type="text" name="price_max" value="30000" width="100%")
                         div.filter-mans
                             p.filter-mans__header Производители:
-                            div.filter-mans__content
-                                - var mans = ["Bosch","Интерскол","Makita","Dewalt","Hitachi"]                    
-                                    each man in mans  
-                                        if(man == "Bosch" || man == "Makita")
-                                            li.filter-mans__item.filter-mans__item--active                                             
-                                                a(href="#") #{man}
-                                        else
-                                            li.filter-mans__item
-                                                a(href="#") #{man}
+                            ul.filter-mans__content   
+                                li
+                                    - var mans = ["Bosch","Интерскол","Makita","Dewalt","Hitachi"]                    
+                                        each man in mans  
+                                            if(man == "Bosch" || man == "Makita")
+                                                li
+                                                    input(type="checkbox"  name="mans" id="#{man}" checked).filter-mans__item
+                                                    label(for="#{man}").filter-mans__label #{man}
+                                            else
+                                                li
+                                                    input(type="checkbox"  name="mans" id="#{man}").filter-mans__item
+                                                    label(for="#{man}").filter-mans__label #{man}  
                         div.filter-power
                             p.filter-power__header Питание
                             div.filter-power__content
                                 - var powers = ["Аккумуляторные","Сетевые"]
                                     each power in powers                                        
                                         if(power == "Аккумуляторные")
-                                            li.filter-power__item.filter-power__item--active
-                                                a(href="#") #{power}                        
+                                            li
+                                                input(type="radio" name="power" id="#{power}" checked).filter-power__item
+                                                label(for="#{power}").filter-power__label #{power}                        
                                         else
-                                            li.filter-power__item.filter-power__item
-                                                a(href="#") #{power}
+                                            li
+                                                input(type="radio" name="power"  id="#{power}").filter-power__item
+                                                label(for="#{power}").filter-power__label #{power}                        
+                                                
                         button.btn.btn--show-all Показать
                     div.catalog-items                        
                         div.catalog-items__sort.clearfix

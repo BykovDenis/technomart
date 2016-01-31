@@ -784,10 +784,11 @@ body {
 .goods-active {
   position: absolute;
   top: 29px;
-  left: 43px;
+  left: 38px;
   background-color: #ffffff;
   width: 144px;
   padding: 15px 0;
+  padding-left: 5px;
   z-index: 200;
 }
 .goods-active .icon-basket {
@@ -1052,9 +1053,13 @@ body {
 .filter-mans {
   border-bottom: 1px solid #e5e5e5;
 }
+.filter-mans li {
+  margin-bottom: 12px;
+}
 .filter-mans__header {
   margin: 0;
-  padding: 14.25px 0;
+  padding: 0;
+  padding-top: 14.25px;
   font: bold 17px/30px "PTSansBold", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -1062,27 +1067,32 @@ body {
 .filter-mans__content {
   list-style-type: none;
   font-size: 0;
+  padding: 0;
 }
-.filter-mans__content a {
-  display: inline-block;
-  vertical-align: top;
+.filter-mans__label {
   font: normal 15px/20px "PTSansRegular", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
-  text-decoration: none;
   padding: 3px 0;
 }
-.filter-mans__item:before {
+.filter-mans__item {
+  display: none;
+}
+.filter-mans__item + .filter-mans__label:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  padding-right: 7px;
+  width: 28px;
+  height: 28px;
   font: normal 28px/28px 'symbols-technomart';
   content: '\2610';
   opacity: .3;
-  padding-right: 13px;
 }
-.filter-mans__item--active:before {
+.filter-mans__item:checked + .filter-mans__label:before {
+  font: normal 28px/28px 'symbols-technomart';
   content: '\2611';
-}
-.filter-mans__item {
-  margin-bottom: 12px;
+  opacity: .3;
 }
 .filter-mans__item:last-of-type {
   margin-bottom: 18px;
@@ -1090,6 +1100,9 @@ body {
 .filter-power {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 62px;
+}
+.filter-power li {
+  margin-bottom: 12px;
 }
 .filter-power__header {
   margin: 0;
@@ -1102,24 +1115,35 @@ body {
 .filter-power__content {
   list-style-type: none;
   font-size: 0;
+  padding: 0;
 }
-.filter-power__content a {
+.filter-power__label {
   font: normal 15px/20px "PTSansRegular", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
-  text-decoration: none;
-}
-.filter-power__item:before {
-  font: normal 28px/28px 'symbols-technomart';
-  content: '\25cb';
-  opacity: .3;
-  padding-right: 13px;
+  padding: 3px 0;
 }
 .filter-power__item {
-  margin-bottom: 12px;
+  display: none;
 }
 .filter-power__item--active:before {
   content: '\25cf';
+}
+.filter-power__item + .filter-power__label:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  padding-right: 7px;
+  width: 28px;
+  height: 28px;
+  font: normal 28px/28px 'symbols-technomart';
+  content: '\25cb';
+  opacity: .3;
+}
+.filter-power__item:checked + .filter-power__label:before {
+  font: normal 28px/28px 'symbols-technomart';
+  content: '\25cf';
+  opacity: .3;
 }
 /*  Панель сортировки */
 .catalog-items {

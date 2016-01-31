@@ -123,19 +123,42 @@
             </div>
             <div class="filter-mans">
               <p class="filter-mans__header">Производители:</p>
-              <div class="filter-mans__content">
-                <li class="filter-mans__item filter-mans__item--active">                                            <a href="#">Bosch</a></li>
-                <li class="filter-mans__item"><a href="#">Интерскол</a></li>
-                <li class="filter-mans__item filter-mans__item--active">                                            <a href="#">Makita</a></li>
-                <li class="filter-mans__item"><a href="#">Dewalt</a></li>
-                <li class="filter-mans__item"><a href="#">Hitachi</a></li>
-              </div>
+              <ul class="filter-mans__content">  
+                <li>
+                  <li>
+                    <input type="checkbox" name="mans" id="Bosch" checked="checked" class="filter-mans__item"/>
+                    <label for="Bosch" class="filter-mans__label">Bosch</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="mans" id="Интерскол" class="filter-mans__item"/>
+                    <label for="Интерскол" class="filter-mans__label">Интерскол  </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="mans" id="Makita" checked="checked" class="filter-mans__item"/>
+                    <label for="Makita" class="filter-mans__label">Makita</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="mans" id="Dewalt" class="filter-mans__item"/>
+                    <label for="Dewalt" class="filter-mans__label">Dewalt  </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="mans" id="Hitachi" class="filter-mans__item"/>
+                    <label for="Hitachi" class="filter-mans__label">Hitachi  </label>
+                  </li>
+                </li>
+              </ul>
             </div>
             <div class="filter-power">
               <p class="filter-power__header">Питание</p>
               <div class="filter-power__content">
-                <li class="filter-power__item filter-power__item--active"><a href="#">Аккумуляторные                        </a></li>
-                <li class="filter-power__item filter-power__item"><a href="#">Сетевые</a></li>
+                <li>
+                  <input type="radio" name="power" id="Аккумуляторные" checked="checked" class="filter-power__item"/>
+                  <label for="Аккумуляторные" class="filter-power__label">Аккумуляторные                        </label>
+                </li>
+                <li>
+                  <input type="radio" name="power" id="Сетевые" class="filter-power__item"/>
+                  <label for="Сетевые" class="filter-power__label">Сетевые                        </label>
+                </li>
               </div>
             </div>
             <button class="btn btn--show-all">Показать</button>
