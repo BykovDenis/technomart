@@ -64,7 +64,8 @@ body {
 }
 .icon-login,
 .icon-user,
-.icon-logout {
+.icon-logout,
+.icon-home {
   color: #000000;
 }
 .icon-search {
@@ -947,6 +948,8 @@ body {
   color: #000000;
   margin: 0;
   margin-bottom: 10px;
+  max-height: 40px;
+  overflow: hidden;
 }
 .goods__price-old {
   font: bold 17px/18px "PTSansBold", Arial, sans-serif;
