@@ -109,44 +109,42 @@
                 </div>
                 <div class="slider-price__means">
                   <div class="slider-price__means-min">
-                    <input type="text" name="price_min" value="0" width="100%"/>
+                    <input type="text" name="price_min" value="0"/>
                   </div>
                   <div class="slider-price__means-max">
-                    <input type="text" name="price_max" value="30000" width="100%"/>
+                    <input type="text" name="price_max" value="30000"/>
                   </div>
                 </div>
               </div>
             </div>
             <div class="filter-mans">
               <p class="filter-mans__header">Производители:</p>
-              <ul class="filter-mans__content">  
+              <ul class="filter-mans__content">                                  
                 <li>
-                  <li>
-                    <input type="checkbox" name="mans" id="Bosch" checked="checked" class="filter-mans__item"/>
-                    <label for="Bosch" class="filter-mans__label">Bosch</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="mans" id="Интерскол" class="filter-mans__item"/>
-                    <label for="Интерскол" class="filter-mans__label">Интерскол  </label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="mans" id="Makita" checked="checked" class="filter-mans__item"/>
-                    <label for="Makita" class="filter-mans__label">Makita</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="mans" id="Dewalt" class="filter-mans__item"/>
-                    <label for="Dewalt" class="filter-mans__label">Dewalt  </label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="mans" id="Hitachi" class="filter-mans__item"/>
-                    <label for="Hitachi" class="filter-mans__label">Hitachi  </label>
-                  </li>
+                  <input type="checkbox" name="mans" id="Bosch" checked="checked" class="filter-mans__item"/>
+                  <label for="Bosch" class="filter-mans__label">Bosch</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="mans" id="Интерскол" class="filter-mans__item"/>
+                  <label for="Интерскол" class="filter-mans__label">Интерскол  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="mans" id="Makita" checked="checked" class="filter-mans__item"/>
+                  <label for="Makita" class="filter-mans__label">Makita</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="mans" id="Dewalt" class="filter-mans__item"/>
+                  <label for="Dewalt" class="filter-mans__label">Dewalt  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="mans" id="Hitachi" class="filter-mans__item"/>
+                  <label for="Hitachi" class="filter-mans__label">Hitachi  </label>
                 </li>
               </ul>
             </div>
             <div class="filter-power">
               <p class="filter-power__header">Питание</p>
-              <div class="filter-power__content">
+              <ul class="filter-power__content">
                 <li>
                   <input type="radio" name="power" id="Аккумуляторные" checked="checked" class="filter-power__item"/>
                   <label for="Аккумуляторные" class="filter-power__label">Аккумуляторные                        </label>
@@ -155,7 +153,7 @@
                   <input type="radio" name="power" id="Сетевые" class="filter-power__item"/>
                   <label for="Сетевые" class="filter-power__label">Сетевые                        </label>
                 </li>
-              </div>
+              </ul>
             </div>
             <button class="btn btn--show-all">Показать</button>
           </div>
@@ -305,14 +303,15 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__layout">
-        <div class="main-footer__row1 clearfix"><a href="index.html"><b class="logo logo--footer">ТЕХНОМАРТ</b>
-            <ul class="main-footer__menu">
-              <li> <a href="#">Компания</a></li>
-              <li> <a href="#">Новости</a></li>
-              <li> <a href="#">Каталог</a></li>
-              <li>    <a href="#">Доставка</a></li>
-              <li>     <a href="#">Контакты                                   </a></li>
-            </ul></a></div>
+        <div class="main-footer__row1 clearfix"><a href="index.html"><b class="logo logo--footer">ТЕХНОМАРТ</b></a>
+          <ul class="main-footer__menu">
+            <li> <a href="#">Компания</a></li>
+            <li> <a href="#">Новости</a></li>
+            <li> <a href="#">Каталог</a></li>
+            <li>    <a href="#">Доставка</a></li>
+            <li>     <a href="#">Контакты                                   </a></li>
+          </ul>
+        </div>
         <div class="main-footer__row2 clearfix">
           <p>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>

@@ -1237,6 +1237,7 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 15px;
+  padding-bottom: 12px;
   font: bold 17px/30px "PTSansBold", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
