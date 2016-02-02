@@ -691,6 +691,7 @@ body {
   border-radius: 50%;
   background-color: #ffffff;
   box-shadow: 0 2px 0 0 #d4d1cb;
+  cursor: pointer;
 }
 .slider-price__point {
   position: absolute;

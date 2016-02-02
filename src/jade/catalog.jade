@@ -6,7 +6,6 @@ html
         link(href="css/normalize.css" rel="stylesheet")
         link(href="css/symbols-technomart.css" rel="stylesheet")            
         link(href="css/style.css" rel="stylesheet")
-
     body  
         header.main-header
             div.top-menu.clearfix
@@ -107,16 +106,16 @@ html
                                 div.slider-price__control-panel 
                                     &nbsp;
                                     div.slider-price__control-line
-                                    div.slider-price__control-line.slider-price__control-line--active
-                                    div.slider-price__disc.slider-price__disc--min
-                                    div.slider-price__disc.slider-price__disc--max
-                                    div.slider-price__point.slider-price__point--min
-                                    div.slider-price__point.slider-price__point--max
+                                    div(id="line_active").slider-price__control-line.slider-price__control-line--active
+                                    div(id="disc_min").slider-price__disc.slider-price__disc--min
+                                    div(id="disc_max").slider-price__disc.slider-price__disc--max
+                                    div(id="point_min").slider-price__point.slider-price__point--min
+                                    div(id="point_max").slider-price__point.slider-price__point--max
                                 div.slider-price__means
                                     div.slider-price__means-min
-                                        input(type="text" name="price_min" value="0")
+                                        input(type="text"  id="price_min" name="price_min" value="0")
                                     div.slider-price__means-max
-                                        input(type="text" name="price_max" value="30000")
+                                        input(type="text"  id="price_max" name="price_max" value="30000")
                         div.filter-mans
                             p.filter-mans__header Производители:
                             ul.filter-mans__content                                   
@@ -370,6 +369,7 @@ html
                         div.main-footer__development
                             p Разработано —
                             a(href="http://htmlacademy.ru") htmlacademy.ru
+        script(src="js/script.js")                            
         
                         
                 
