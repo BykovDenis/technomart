@@ -940,10 +940,7 @@ body {
   position: relative;
 }
 .goods__image img {
-  position: absolute;
-  top: 50%;
-  left: 28px;
-  transform: translateY(-50%);
+  max-width: 218px;
 }
 .goods__title {
   font: bold 18px / 20px "PTSansBold", Arial, sans-serif;
@@ -954,11 +951,11 @@ body {
   overflow: hidden;
 }
 .goods__price-old {
-  font: bold 17px/18px "PTSansBold", Arial, sans-serif;
+  font: bold 17px/20px "PTSansBold", Arial, sans-serif;
   color: #999999;
   text-decoration: line-through;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .goods__price:after {
   width: 0;
@@ -968,35 +965,32 @@ body {
 }
 .goods__price {
   position: relative;
-  padding: 10px 0;
   width: 140px;
   margin: 0 auto;
   margin-bottom: 20px;
-  font: bold 17px/18px "PTSansBold", Arial, sans-serif;
+  font: bold 17px/20px "PTSansBold", Arial, sans-serif;
   color: #ffffff;
   border-radius: 5px 0 0 5px;
 }
 .goods__price-label {
-  position: absolute;
   width: 140px;
-  height: 19px;
+  height: 38px;
+  min-height: 38px;
   box-sizing: border-box;
-  background-color: #63a63e;
-  z-index: -1;
+  padding: 9px 0;
+  background-color: #ee3643;
+  border-radius: 5px 0 0 5px;
 }
-.goods__price-label--top {
+.goods__price-label:after {
+  content: '';
+  position: absolute;
   top: 0;
-  left: 0;
-  border-bottom: 19px solid #ee3643;
-  border-right: 19px solid white;
-  border-radius: 5px 0 0 0px;
-}
-.goods__price-label--bottom {
-  bottom: 0;
-  left: 0;
-  border-top: 19px solid #ee3643;
-  border-right: 19px solid white;
-  border-radius: 0 0 0 5px;
+  left: 124px;
+  height: 0;
+  width: 0;
+  border: 19px solid #ffffff;
+  border-left-color: #ee3643;
+  z-index: 100;
 }
 .goods:hover .goods-active {
   display: block;
@@ -1040,7 +1034,8 @@ body {
   margin-right: 0;
 }
 .brands__item img {
-  padding: 28.5px 0;
+  height: 143px;
+  width: 218px;
 }
 .brands__item:hover {
   box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.3);

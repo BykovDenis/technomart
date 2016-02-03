@@ -1629,14 +1629,9 @@ body{
         
         img{
             
-            position: absolute; 
-            top:50%;
-            left:28px;
-            transform: translateY(-50%);
-            
+            max-width: 218px;
             
         }
-
         
     }
     
@@ -1654,11 +1649,11 @@ body{
     &__price-old{
         
         
-        font: bold ((@font-size-base + 4px))/ ((@line-height - 6px)) @font-family-ptsansbold;
+        font: bold ((@font-size-base + 4px))/ ((@line-height - 4px)) @font-family-ptsansbold;
         color: @color-gray1;
         text-decoration: line-through;
         margin: 0;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         
         
     }
@@ -1666,72 +1661,64 @@ body{
     
      &__price:after{
             
-            width: 0;
-            height: 0;
-            border-bottom: 120px solid @color-blue;
-            border-left: 120px solid transparent;
+        width: 0;
+        height: 0;
+        border-bottom: 120px solid @color-blue;
+        border-left: 120px solid transparent;
             
-    }    
+    }  
+    
     
     &__price{
         
         position: relative;
-        
-        padding: 10px 0;
+                
         width: 140px;
         
         margin: 0 auto;
         margin-bottom: 20px;
        
         
-        font: bold ((@font-size-base + 4px))/ ((@line-height - 6px)) @font-family-ptsansbold;
+        font: bold ((@font-size-base + 4px))/ ((@line-height - 4px)) @font-family-ptsansbold;
         color: @color-white;
         
-        
-
         border-radius: 5px 0 0 5px;
                 
     }
     
     &__price-label{
         
-        position: absolute;
         width: 140px;
-        height: 19px;
-        box-sizing:border-box;         
+        height: 38px;
+        min-height: 38px;
+        box-sizing:border-box;   
+        padding: 9px 0;
         
-        background-color: @color-green;
-        z-index: -1;
+        background-color: @color-red;  
+        border-radius: 5px 0 0 5px;
+        
         
     }
     
-    &__price-label--top{
+    &__price-label:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 124px;
+        height: 0;
+        width: 0;
+        border: 19px solid @color-white;
+        border-left-color: @color-red;
         
-       top:0;
-       left:0;
+        z-index: 100;
         
-       border-bottom: 19px solid @color-red;
-       border-right: 19px solid white; 
-
-       border-radius: 5px 0 0 0px;   
-
-    }
+    }    
     
-    &__price-label--bottom{
-        
-       bottom:0;
-       left:0;
-        
-       border-top: 19px solid @color-red;
-       border-right: 19px solid white; 
 
-       border-radius: 0 0 0 5px;   
-        
-    }
     
     &:hover .goods-active{        
         
-        display: block;        
+        display: block;         
         
     }
     
@@ -1799,7 +1786,8 @@ body{
 
             img{
 
-                padding: 28.5px 0;
+                height: 143px;
+                width: 218px;
 
             }
 
