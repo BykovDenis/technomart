@@ -321,7 +321,7 @@ body {
 .auth a {
   display: inline-block;
   vertical-align: top;
-  font: normal 21px/18px "CuprumRegular", Arial, sans-serif;
+  font: normal 21px/22px "CuprumRegular", Arial, sans-serif;
   color: #000000;
   text-decoration: none;
 }
@@ -457,7 +457,6 @@ body {
   vertical-align: top;
   text-align: center;
   /* width: 127px;*/
-  padding: 17px 28px;
 }
 .main-menu__item:hover {
   background-color: #293449;
@@ -466,6 +465,9 @@ body {
   background-color: #293449;
 }
 .main-menu a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 17px 28px;
   font: normal 17px/21px "CuprumRegular", Arial, sans-serif;
   color: #ffffff;
   text-decoration: none;
