@@ -893,6 +893,7 @@ body{
         
         float: left;  
         width: 610px;
+        position: relative;
         
     }
     
@@ -1060,11 +1061,37 @@ body{
 .slider{
     
     width: 622px;
-    height: 266px;
-    position: relative;
-    
-    
+    height: 266px;   
     color: @color-white;
+    position:relative;
+    
+    
+    &__header {        
+       
+        background-size: 622px 266px; 
+        width: 622px;       
+        height: 266px;
+        padding: 25px 0 23px 0;
+        
+        margin-bottom: 4px;        
+        
+    }
+    
+    &:first-of-type &__header{
+        
+        background:
+            url(../img/img_slider_shadow.png) 0 0 no-repeat,
+            url(../img/img_slider_drill1.jpg) 0 0 no-repeat; 
+        
+    }
+    
+    &:nth-of-type(2) &__header{
+        
+        background:
+            url(../img/img_slider_shadow2.png) 0 0 no-repeat,
+            url(../img/img_slider_drill2.jpg) 0 0 no-repeat;
+    }
+    
     
     &__layout{
                 
@@ -1100,40 +1127,6 @@ body{
 
     }
     
-    img{
-        
-        position: absolute;
-        top:0;
-        left:0;
-        
-        z-index: -100;
-        
-    }
-    
-    &__header{
-        
-        width: 622px;
-    
-        background-color: rgba(0,0,0, 0.3);
-        padding: 25px 0 23px 0;
-        
-        margin-bottom: 4px;
-        
-    }
-    
-    &:first-of-type  &__header{
-        
-        background: url(../img/img_slider_shadow.png) 0 0 no-repeat;    
-        
-    }
-    
-    &:nth-of-type(2)  &__header{
-        
-        background: url(../img/img_slider_shadow2.png) 0 0 no-repeat;    
-        
-    }    
-    
-
     &__title{   
 
         margin:0;
@@ -1151,35 +1144,77 @@ body{
         
     } 
     
-    &__control{
+    &:nth-of-type(2){
         
-        margin-bottom: 48px;
-        
-        a{
-            
-            color: @color-white;
-            
-        }
+        display: none;
         
     }
     
 
+
 }
 
 .control{
-
-    position: absolute;
+    
+    width: 622px;
     text-align: center;
     
     
-    bottom: 33px;
-    left: 50%;
-    transform: translateX(-50%);  
+    &__panel{
+        
+        position: absolute;
+        text-align: center;    
+    
+        bottom: 35px;
+        left: 51%;
+        transform: translateX(-50%); 
+    } 
+    
+    &__way{
+        
+        position: absolute;           
+    
+        left:5px;
+        top: 112px;
+        width: 616px;
+        height: 45px;        
+         
+        
+        i{
+            
+            color: @color-white;
+            text-decoration: none; 
+            font-size: 45px;
+            line-height: 18px;
+            
+            cursor: pointer;
+            
+         }
+        
+    }
+    
+    &__prev{
+
+        float: left;
+
+    }
+
+    &__next{
+
+        float: right;
+
+    }
     
 
     &__label{        
         
         margin-right: 10px;        
+            
+    }
+    
+    &__label:last-of-type{        
+        
+        margin-right: 0;        
             
     }
     
@@ -1221,7 +1256,8 @@ body{
         display: none;
         
     }
-
+    
+    
 }   
 
 
@@ -1487,6 +1523,7 @@ body{
     &--slider{
         
         width: 176px; 
+        margin-top: 120px;
         
     }
     

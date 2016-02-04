@@ -7,7 +7,7 @@ html
         link(href="css/symbols-technomart.css" rel="stylesheet")            
         link(href="css/style.css" rel="stylesheet")
 
-    body  
+    body(onload="javascript:slider()")  
         header.main-header
             div.top-menu.clearfix
                 div.top-menu__layout
@@ -96,40 +96,30 @@ html
                                     img(src="img/img_tractor.png" width="78" height="62" alt="Техника").banner-card-goods__image                                   
                     div.top-block__row2
                         div.top-block__col1
-                            div.slider  
-                                img(src="img/img_slider_drill2.jpg" width="622" height="266" alt="Дрели соседям на радость").slider__image
+                            div(id="slider1").slider                                                                   
                                 div.slider__header                                                                            
                                     div.slider__layout 
                                         h4.slider__title Перфораторы
-                                        p.slider__content Настроящие мужские игрушки                                
-                                div.slider__layout    
-                                    div.slider__control.clearfix                                    
-                                        a(href="#")
-                                            i.icon-left
-                                        a(href="#")    
-                                            i.icon-right
-                                    div.control.clearfix                                    
-                                        input(type="radio" name="control1" id="control1" checked).control__input 
-                                        label(for="control1").control__label  1
-                                        input(type="radio" name="control1" id="control2").control__input         
-                                        label(for="control2").control__label 1  
-                                                                                                                                   
-                                    a(href="#").btn-lnk.btn-lnk--slider Открыть каталог
-                            div.slider  
-                                img(src="img/img_slider_drill.jpg" width="622" height="266" alt="Дрели соседям на радость").slider__image
+                                        p.slider__content Настроящие мужские игрушки                                   
+                                        a(href="#").btn-lnk.btn-lnk--slider Открыть каталог 
+                            div(id="slider2").slider                                                                   
                                 div.slider__header                                                                            
                                     div.slider__layout 
                                         h4.slider__title Дрели
-                                        p.slider__content Соседям на радость
-                                div.slider__layout                                                                                           
-                                    div.slider__control.clearfix                                    
-                                        a(href="#")
-                                            i.icon-left
-                                        a(href="#")    
-                                            i.icon-right
-                                    a(href="#").btn-lnk.btn-lnk--slider Открыть каталог                                    
-                                
-                            
+                                        p.slider__content Соседям на радость                                   
+                                        a(href="#").btn-lnk.btn-lnk--slider Открыть каталог 
+                            div.control                            
+                                div.control__way                                  
+                                    i(id="prev").control__prev
+                                        i.icon-left
+                                    i(id="next").control__next    
+                                        i.icon-right                                        
+                                div.control__panel                                   
+                                    input(type="radio" name="control1" id="control1" checked).control__input 
+                                    label(for="control1").control__label  1
+                                    input(type="radio" name="control1" id="control2").control__input         
+                                    label(for="control2").control__label 1                                                                                                                                     
+                                                                 
                         div.top-block__col2  
                             div.banner-card-goods.banner-card-goods--green
                                 div.banner-card-goods__layout
@@ -348,6 +338,7 @@ html
                         div.main-footer__development
                             p Разработано —
                             a(href="http://htmlacademy.ru") htmlacademy.ru
+        script(src="js/script.js")                              
         
                         
                 

@@ -7,7 +7,7 @@
     <link href="css/symbols-technomart.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
-  <body> 
+  <body onload="javascript:slider()"> 
     <header class="main-header">
       <div class="top-menu clearfix">
         <div class="top-menu__layout"><a href="index.html">
@@ -100,32 +100,29 @@
           </div>
           <div class="top-block__row2">
             <div class="top-block__col1">
-              <div class="slider"> <img src="img/img_slider_drill2.jpg" width="622" height="266" alt="Дрели соседям на радость" class="slider__image"/>
+              <div id="slider1" class="slider">                                                                  
                 <div class="slider__header">                                                                           
                   <div class="slider__layout"> 
                     <h4 class="slider__title">Перфораторы</h4>
-                    <p class="slider__content">Настроящие мужские игрушки                                </p>
+                    <p class="slider__content">Настроящие мужские игрушки                                   </p><a href="#" class="btn-lnk btn-lnk--slider">Открыть каталог </a>
                   </div>
                 </div>
-                <div class="slider__layout">   
-                  <div class="slider__control clearfix">                                   <a href="#"><i class="icon-left"></i></a><a href="#">   <i class="icon-right"></i></a></div>
-                  <div class="control clearfix">                                   
-                    <input type="radio" name="control1" id="control1" checked="checked" class="control__input"/>
-                    <label for="control1" class="control__label"> 1</label>
-                    <input type="radio" name="control1" id="control2" class="control__input"/>
-                    <label for="control2" class="control__label">1  </label>
-                  </div><a href="#" class="btn-lnk btn-lnk--slider">Открыть каталог</a>
-                </div>
               </div>
-              <div class="slider"> <img src="img/img_slider_drill.jpg" width="622" height="266" alt="Дрели соседям на радость" class="slider__image"/>
+              <div id="slider2" class="slider">                                                                  
                 <div class="slider__header">                                                                           
                   <div class="slider__layout"> 
                     <h4 class="slider__title">Дрели</h4>
-                    <p class="slider__content">Соседям на радость</p>
+                    <p class="slider__content">Соседям на радость                                   </p><a href="#" class="btn-lnk btn-lnk--slider">Открыть каталог </a>
                   </div>
                 </div>
-                <div class="slider__layout">                                                                                          
-                  <div class="slider__control clearfix">                                   <a href="#"><i class="icon-left"></i></a><a href="#">   <i class="icon-right"></i></a></div><a href="#" class="btn-lnk btn-lnk--slider">Открыть каталог                                    </a>
+              </div>
+              <div class="control">                           
+                <div class="control__way">                                 <i id="prev" class="control__prev"><i class="icon-left"></i></i><i id="next" class="control__next">   <i class="icon-right">                                       </i></i></div>
+                <div class="control__panel">                                  
+                  <input type="radio" name="control1" id="control1" checked="checked" class="control__input"/>
+                  <label for="control1" class="control__label"> 1</label>
+                  <input type="radio" name="control1" id="control2" class="control__input"/>
+                  <label for="control2" class="control__label">1                                                                                                                                     </label>
                 </div>
               </div>
             </div>
@@ -333,5 +330,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js">                             </script>
   </body>
 </html>
