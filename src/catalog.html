@@ -7,7 +7,7 @@
     <link href="css/symbols-technomart.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
-  <body onload="javascript:price_slider()"> 
+  <body onload="javascript:catalog()"> 
     <header class="main-header">
       <div class="top-menu clearfix">
         <div class="top-menu__layout"><a href="index.html">
@@ -79,11 +79,24 @@
             <li class="breadcrumbs__item"><a href="#"><i class="icon-home"></i><i class="icon-right"></i></a></li>
             <li class="breadcrumbs__item"><a href="#">Каталог<i class="icon-right"></i></a></li>
             <li class="breadcrumbs__item"><a href="#">Инструмент<i class="icon-right"></i></a></li>
-            <li class="breadcrumbs__item"><a href="#">Перфораторы  </a></li>
+            <li class="breadcrumbs__item"><a href="#">Перфораторы </a></li>
           </ul>
         </div>
       </div>
       <div class="popular">
+        <div class="basket-dialog"><i id="basket_dialog_close" class="icon-close"></i>
+          <div class="basket-dialog__layout">
+            <div class="basket-dialog__content"> 
+              <div class="basket-dialog__check"></div>Товар добавлен в корзину!
+            </div>
+          </div>
+          <div class="basket-dialog__actions">
+            <div class="basket-dialog__layout"> 
+              <button type="button" class="btn-lnk btn-lnk--order">Оформить заказ</button>
+              <button type="button" class="btn-lnk btn-lnk--basket">Продолжить покупки</button>
+            </div>
+          </div>
+        </div>
         <div class="popular__layout clearfix">
           <div class="popular__header--goods-name clearfix">
             <h2 class="popular__title">Перфораторы  </h2>
@@ -169,7 +182,10 @@
             </div>
             <div class="catalog-items__goods">                      
               <div class="goods"> 
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки </a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__image"><img src="img/img_bosch_bfg3000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 3000</p>
@@ -180,7 +196,10 @@
                 </div>
               </div>
               <div class="goods"> 
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки                          </a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки                     </button>
+                </div>
                 <div class="goods__image"><img src="img/img_bosch_bfg6000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 6000</p>
@@ -191,7 +210,10 @@
                 </div>
               </div>
               <div class="goods"> 
-                <div class="goods-active goods-active--active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
+                <div class="goods-active goods-active--active">                                   
+                  <button type="button" id="goods_buy" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__new"></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg2000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000"/></div>
                 <div class="goods__layout">
@@ -203,7 +225,10 @@
                 </div>
               </div>
               <div class="goods"> 
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__image"><img src="img/img_bosch_bfg3000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 3000</p>
@@ -214,7 +239,10 @@
                 </div>
               </div>
               <div class="goods">  
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__new"></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg6000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000"/></div>
                 <div class="goods__layout">
@@ -226,7 +254,10 @@
                 </div>
               </div>
               <div class="goods"> 
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__image"><img src="img/img_bosch_bfg2000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 2000</p>
@@ -237,7 +268,10 @@
                 </div>
               </div>
               <div class="goods"> 
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__new"></div>
                 <div class="goods__image"><img src="img/img_bosch_bfg3000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000"/></div>
                 <div class="goods__layout">
@@ -249,7 +283,10 @@
                 </div>
               </div>
               <div class="goods">  
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__image"><img src="img/img_bosch_bfg6000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 6000</p>
@@ -260,7 +297,10 @@
                 </div>
               </div>
               <div class="goods">  
-                <div class="goods-active"><i class="icon-basket"></i><a href="#" class="goods-active__buy">Купить</a><a href="#" class="goods-active__tab">В закладки</a></div>
+                <div class="goods-active">
+                  <button type="button" class="goods-active__buy">Купить<i class="icon-basket"></i></button>
+                  <button type="button" class="goods-active__tab">В закладки</button>
+                </div>
                 <div class="goods__image"><img src="img/img_bosch_bfg2000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000"/></div>
                 <div class="goods__layout">
                   <p class="goods__title">Перфоратор BOSCH BFG 2000</p>

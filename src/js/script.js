@@ -1,3 +1,4 @@
+// работа со слайдером
 function slider(){
     
     var i = 0;
@@ -73,10 +74,78 @@ function slider(){
         
     });
     
+    // Показать карту
+    var map_show = document.getElementById("map_show");
+    var map_close = document.getElementById("map_close");
+
+    map_show.addEventListener("click", function(){
+
+        var map = document.querySelector(".information__map--hover");
+
+        map_close.style.display = "block";
+        map.style.display = "block";    
+
+    });
+
+
+
+    // Закрыть карту при клике на значке
+    map_close.addEventListener("click", function(){
+
+        var map = document.querySelector(".information__map--hover");
+
+        map_close.style.display = "none";
+        map.style.display = "none";
+
+    });    
+    
+    // Открыть окно для отзыва
+    
+    var about = document.querySelector("#about");    
+    var about_close = document.querySelector("#about_close");
+    var frm_about = document.querySelector(".about");
+        
+    about.addEventListener("click", function(){
+        
+        frm_about.style.display = "block";  
+        about_close.style.display = "block";
+        
+    });
+    
+    // ОТправить отзыв
+    
+    var sbm_send_message = document.querySelector("#sbm_send_message");
+    var about_name = document.querySelector("#about_name");
+    var about_email = document.querySelector("#about_email");
+    var about_message = document.querySelector("#about_message");
+    
+    sbm_send_message.addEventListener("click", function(){
+       
+        console.log("Ваше имя "+ about_name.value);
+        console.log("Ваше e-mail "+about_email.value);
+        console.log("Текст письма"+about_email.value);
+        
+    });
+    
+    // Закрыть окно отзыва
+    
+    about_close.addEventListener("click", function(){
+
+        var map = document.querySelector(".information__map--hover");
+
+        about_close.style.display = "none";
+        frm_about.style.display = "none";
+
+    });  
+    
 }
 
 
-function price_slider(){
+
+
+// работа со слайдером цен
+
+function catalog(){
 
     var disc_min = document.getElementById("disc_min");
     var disc_max = document.getElementById("disc_max");
@@ -108,7 +177,7 @@ function price_slider(){
 
         moveAt(e);
 
-        function moveAt(e){
+        function moveAt(e){ 
           
             var i = e.clientX - interval.offsetLeft - 9;
             var cost = i - 21;
@@ -185,8 +254,32 @@ function price_slider(){
             disc_max.onmouseup = null;
 
         };
-
+        
     };
-
+    
+   
+    
+    var goods_buy = document.querySelector("#goods_buy");
+    var basket_dialog = document.querySelector(".basket-dialog");
+    var basket_dialog_close = document.querySelector("#basket_dialog_close");
+    
+     // Отобразить окно добавления в корзину
+    
+    goods_buy.addEventListener("click", function(){
+        
+       basket_dialog.style.display = "block";
+       basket_dialog_close.style.display = "block";
+        
+    });
+        
+    
+    // Закрыть окно добавления в корзину
+    
+    basket_dialog_close.addEventListener("click", function(){
+        
+       basket_dialog.style.display = "none";
+       basket_dialog_close.style.display = "none";
+        
+    }); 
 
 }

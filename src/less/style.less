@@ -137,7 +137,9 @@ body{
 
 .icon-basket{
     
+    
     padding-left: 14px;
+    
     
 }
 
@@ -188,6 +190,21 @@ body{
     
     opacity: .3;
     
+}
+
+.icon-close{
+    
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    
+    display: block;
+    width: 21px;
+    height: 21px;
+    
+    background: url("../img/icon_close.png") 0 0 no-repeat;   
+    cursor: pointer;
+        
 }
 
 .clearfix:after{
@@ -1431,6 +1448,8 @@ body{
 
 .popular{
     
+    position: relative;
+    
     &--gray{
                         
         background-color: @color-gray3; 
@@ -1553,14 +1572,49 @@ body{
     &--information{
         
         width: 200px;
+        outline: none;
         
     }
     
-    &--information2{
+    &--information2,
+    &--message-send{
         
-        width: 280px;
+        width: 100%;
+        outline: none;
         
-    }    
+    }  
+    
+    &--order{
+        
+        margin-right: 15px;
+        width: 220px;
+        outline: none;        
+        
+        
+    }
+    
+
+    &--basket{
+        
+        margin-right: 0;
+        width: 220px;
+        outline: none;
+        
+        
+        background-color: @color-white;
+        color: @color-black;
+        
+    }
+    
+    &--basket:hover,
+    &--basket:active{
+        
+    
+        background-color: @color-white;
+        color: @color-black;
+        text-decoration: underline;
+        
+    }
     
     
 }
@@ -1586,13 +1640,13 @@ body{
     
     & .icon-basket{
         
-        padding:9px 0;
-        padding-left: 8px;
+        padding: 0;
+        padding-left: 12px;
         padding-right: 17px;
         
         
         font-size: ((@font-size-base + 4px));        
-        line-height: ((@line-height - 8px));
+        line-height: ((@line-height - 4px));
         color: @color-white;
         opacity: .3;
         
@@ -1600,21 +1654,25 @@ body{
     
     &__buy{
         
+        position: relative;
+        
         display: block;
-        padding: 9.5px 0;
+        padding: 7.5px 0;
         margin-bottom:8px;
         
         width: 135px;
         
-        background: @color-green;        
-        font: normal  ((@font-size-base + 1px)) / ((@line-height - 8px)) @font-family-cuprumregular; 
+        background-color: @color-green;        
+        font: normal  ((@font-size-base + 1px)) / ((@line-height - 4px)) @font-family-cuprumregular; 
         color: @color-white;
         text-align: left;
         text-decoration: none;
         text-transform: uppercase;
         
+        border: none;
         border-bottom: 3px solid @color-green-dark;
-        border-radius: 3px;      
+        border-radius: 3px;          
+        outline: none;
         
     }
     
@@ -1624,7 +1682,7 @@ body{
         display: block;
         padding: 8px 0;
         
-        width: 129px;
+        width: 135px;
         
         text-align: center;
         font: normal  ((@font-size-base + 1px)) / ((@line-height - 8px)) @font-family-cuprumregular; 
@@ -1632,8 +1690,14 @@ body{
         text-decoration: none;
         text-transform: uppercase;
         
+        background-color: @color-white;
+        
+        border: none;
         border: 3px solid @color-green-dark;
         border-radius: 3px;
+        
+        text-align: center;        
+        outline: none;
         
     }
     
@@ -1999,7 +2063,7 @@ body{
         height: 297px;
         
         background: url(../img/img-border-right.png) 0 25px no-repeat;
-        backgound-size: 10px 272px;
+        background-size: 10px 272px;
         
         z-index: 100;
         
@@ -2070,7 +2134,8 @@ body{
 
 .information{
     
-    margin: 83px 0;    
+    margin: 83px 0;
+    position: relative;
     
     
     &__layout{
@@ -2084,6 +2149,7 @@ body{
         
         float: left;
         width: 540px;
+        position: relative;
         
     }
     
@@ -2152,15 +2218,216 @@ body{
         
     }
     
-    
     &__map{
 
         margin-top: 33px;
         margin-bottom: 33px;
-
-    }    
+        cursor: pointer;
+        
+    }   
+    
+    &__map--hover{
+        
+        position: absolute;
+        display: none;
+        
+        z-index: 100;        
+        
+        width: 940px;
+        height: 446px;
+        
+        bottom: -29px;
+        left: 133px;
+        
+        background-color: @color-gray;
+        background: url("../img/img_map_hover.jpg") -133px -256px no-repeat;
+        
+        box-shadow: 0 0 12px 3px @color-gray6;
+        
+    }
     
 }
+
+    
+.about{
+
+    position: absolute;
+    
+    display: none;
+
+    height: 423px;
+    width: 620px;
+
+    top: 118px;
+    left: 161px;
+
+    z-index: 1;
+
+    background-color: @color-white;
+    border-top: 7px solid @color-red;    
+
+    box-shadow: 0 15px 27px 10px rgba(0,0,0,.5);
+    
+    
+    &__layout{
+        
+        margin: 0 80px;
+        
+    }
+    
+    &__col1{
+        
+        float: left;
+        padding-top: 48px;
+        
+    }
+    
+    &__col2{
+        
+        float:right;
+        padding-top: 48px;
+        
+    }
+    
+    &__row2{
+        
+        margin-top: 22px;
+        margin-bottom: 37px;
+        
+    }
+    
+    
+    & input[type="text"]{
+        
+        display: block;
+        
+        padding: 8px 0;
+        padding-left: 13px;
+        
+        box-sizing: border-box;
+        width: 220px;
+        border: 2px solid @color-gray4;
+        border-radius: 3px;
+        
+        font: normal @font-size-base / ((@line-height - 6px))  @font-family-ptsansregular;
+        color: @color-gray1;
+        
+        outline: none;
+                
+    }
+    
+    &__label-name,
+    &__label-email,
+    &__label-message{
+        
+        display: inline-block;
+        vertical-align: top;
+        
+        margin-bottom: 7px;
+        
+        font: normal ((@font-size-base + 5px )) / ((@line-height - 6px))  @font-family-cuprumregular;
+        color: @color-black;
+        
+    }
+    
+
+    &__message{
+        
+        box-sizing: border-box;
+        
+        padding: 8px 0;
+        padding-left: 13px;
+        
+        width: 100%;
+        height: 114px;
+        
+        
+        
+        border: 2px solid @color-gray4;
+        border-radius: 3px;
+        
+        font: normal @font-size-base / ((@line-height - 6px))  @font-family-ptsansregular;
+        color: @color-gray1;
+        
+        outline: none;
+        
+    }
+    
+    
+    &__message-send{
+        
+        background-color: @color-gray7;
+        padding: 35px 0;        
+       
+    }    
+
+
+}
+
+.basket-dialog{
+    
+    display: none;
+    
+    position: absolute;
+    
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 620px;
+    height: 282px;
+
+    background-color: @color-white;
+    border-top: 7px solid @color-red;    
+
+    box-shadow: 0 42px 27px 10px rgba(0,0,0,.4);
+    
+    z-index: 500;
+    
+    &__layout{
+        
+        margin: 0 80px;
+        
+    }
+    
+    &__check{
+        
+        display: inline-block;
+        vertical-align: middle;
+        
+        margin-right: 33px;
+        
+        width: 66px;
+        height: 65px;
+        background: url(../img/icon_check.png) 15px 18px no-repeat @color-green;;
+        color: @color-white;
+        
+        border-radius: 50%;
+        
+        
+    }
+    
+    &__content{
+        
+        padding: 47px 0;
+        margin-bottom: 8px;
+        
+        font: normal @font-size-h2 / (( @line-height - 8px)) @font-family-cuprumregular;
+        color: @color-black;
+        text-align: left;
+        
+    }
+    
+    &__actions{
+        
+        background-color: @color-gray7;
+        padding: 37px 0;        
+       
+    }  
+    
+    
+}
+    
 
 
 /* Каталог товаров */
@@ -2187,7 +2454,7 @@ body{
     &__header{
         
         margin:0;
-        pading: 0;
+        padding: 0;
         padding-top: 10.5px;
         padding-bottom: 9px;
         padding-left: 20px;
@@ -2902,6 +3169,8 @@ body{
     }    
     
 }
+
+
 
 
 

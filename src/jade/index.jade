@@ -144,9 +144,9 @@ html
       
                         div.goods  
                             div.goods-active
-                                i.icon-basket
-                                a(href="#").goods-active__buy Купить
-                                a(href="#").goods-active__tab В закладки                        
+                                button(type="button").goods-active__buy Купить
+                                    i.icon-basket
+                                button(type="button").goods-active__tab В закладки                      
                             div.goods__image
                                 img(src="img/img_bosch_bfg9000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 9000")                                
                             div.goods__layout
@@ -156,9 +156,9 @@ html
                                     div.goods__price-label  25500 Р.                                   
                         div.goods 
                             div.goods-active
-                                i.icon-basket
-                                a(href="#").goods-active__buy Купить
-                                a(href="#").goods-active__tab В закладки                        
+                                button(type="button").goods-active__buy Купить
+                                    i.icon-basket
+                                button(type="button").goods-active__tab В закладки                        
                             div.goods__image
                                 img(src="img/img_bosch_bfg3000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000")
                             div.goods__layout
@@ -168,9 +168,9 @@ html
                                     div.goods__price-label 15500 Р. 
                         div.goods   
                             div.goods-active
-                                i.icon-basket
-                                a(href="#").goods-active__buy Купить
-                                a(href="#").goods-active__tab В закладки                        
+                                button(type="button").goods-active__buy Купить
+                                    i.icon-basket
+                                button(type="button").goods-active__tab В закладки                     
                             div.goods__image
                                 img(src="img/img_bosch_bfg6000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000")
                             div.goods__layout
@@ -180,9 +180,9 @@ html
                                     div.goods__price-label 25500 Р.                                      
                         div.goods  
                             div.goods-active
-                                i.icon-basket
-                                a(href="#").goods-active__buy Купить
-                                a(href="#").goods-active__tab В закладки                        
+                                button(type="button").goods-active__buy Купить
+                                    i.icon-basket
+                                button(type="button").goods-active__tab В закладки                              
                             div.goods__new
                             div.goods__image
                                 img(src="img/img_bosch_bfg2000.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000")
@@ -265,8 +265,25 @@ html
                             ul.information__list
                                 li Деловые линии
                                 li Автотрейдинг
-                                li ЖелДорЭкспедиция                                
-                            a(href="#").btn-lnk.btn-lnk--information Подробнее о компании
+                                li ЖелДорЭкспедиция 
+                            form.about
+                                i(id="about_close").icon-close   
+                                div.about__layout.clearfix
+                                    div.about__col1
+                                        label(for="about_name").about__label-name Ваше имя:                                         
+                                        input(type="text" placeholder="Представьтесь, пожалуйста" id="about_name").about__name
+                                    div.about__col2
+                                        label(for="about_email").about__label-email Ваш email:                                         
+                                        input(type="text" placeholder="Для отправки ответа" id="about_email").about__email
+                                div.about__layout 
+                                    div.about__row2
+                                        label(for="about_message").about__label-message Текст письма:
+                                        textarea(placeholder="В свободной форме").about__message
+                                div.about__message-send
+                                    div.about__layout 
+                                        button(type="button" id="sbm_send_message").btn-lnk.btn-lnk--message-send Отправить
+                                
+                            button(type="button" id="about").btn-lnk.btn-lnk--information Подробнее о компании
                             
                         div.information__col2
                             h2.information__header КОНТАКТЫ
@@ -275,7 +292,10 @@ html
                                 заехав в наш офис:
                             div.information__map
                                 img(src="img/img_map.jpg" width="300" height="158" alt="Заблудились? Напишите нам!")
-                            a(href="#").btn-lnk.btn-lnk--information2 Заблудились? Напишите нам!
+                                div.information__map--hover
+                                    i(id="map_close").icon-close                                
+                            button(type="button" id="map_show").btn-lnk.btn-lnk--information2 Заблудились? Напишите нам!
+                            
         footer.main-footer
             div.main-footer__layout
                 div.main-footer__row1.clearfix
