@@ -79,14 +79,43 @@ function slider(){
     var btn_delivery = document.getElementById("btn_delivery");
     var btn_guarantee = document.getElementById("btn_guarantee");
     var btn_credit = document.getElementById("btn_credit");
+	
+	btn_delivery.addEventListener("click", function(){
+
+		btn_guarantee.classList.remove("btn__service--active");
+		btn_delivery.classList.add("btn__service--active");
+		btn_credit.classList.remove("btn__service--active");
+		
+		document.querySelector(".service__about:nth-of-type(2)").style.display = "block";
+		document.querySelector(".service__about:nth-of-type(3)").style.display = "none";
+		document.querySelector(".service__about:nth-of-type(4)").style.display = "none";
+		
+
+	});  
     
     btn_guarantee.addEventListener("click", function(){
        
         btn_guarantee.classList.add("btn__service--active");
         btn_delivery.classList.remove("btn__service--active");
         btn_credit.classList.remove("btn__service--active");
+		
+		document.querySelector(".service__about:nth-of-type(2)").style.display = "none";
+		document.querySelector(".service__about:nth-of-type(3)").style.display = "block";
+		document.querySelector(".service__about:nth-of-type(4)").style.display = "none";		
         
     });    
+	
+	btn_credit.addEventListener("click", function(){
+
+		btn_guarantee.classList.remove("btn__service--active");
+		btn_delivery.classList.remove("btn__service--active");
+		btn_credit.classList.add("btn__service--active");
+		
+		document.querySelector(".service__about:nth-of-type(2)").style.display = "none";
+		document.querySelector(".service__about:nth-of-type(3)").style.display = "none";
+		document.querySelector(".service__about:nth-of-type(4)").style.display = "block";		
+
+	}); 	
    
     
     // Показать карту
