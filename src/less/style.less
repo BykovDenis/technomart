@@ -1615,6 +1615,13 @@ body{
         text-decoration: underline;
         
     }
+        
+    &--credit{
+
+        margin-top: 7px;
+        width: 195px;        
+
+    }
     
     
 }
@@ -2073,6 +2080,7 @@ body{
     
     &__about{
         
+        display: none;
         float: right;
         width : 620px;  
         padding-top: 68px;
@@ -2081,7 +2089,7 @@ body{
         img{
             
             float: right;
-            margin-top: 23px;
+            /* margin-top: 23px;*/
             
         }
         
@@ -2127,6 +2135,12 @@ body{
             
             
         }
+    }
+    
+    &__item--active &__about{
+        
+        display: block;
+        
     }
     
     

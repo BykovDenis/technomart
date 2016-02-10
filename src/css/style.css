@@ -927,6 +927,10 @@ body {
   color: #000000;
   text-decoration: underline;
 }
+.btn-lnk--credit {
+  margin-top: 7px;
+  width: 195px;
+}
 .goods-active {
   display: none;
   position: absolute;
@@ -1200,13 +1204,14 @@ body {
   z-index: 100;
 }
 .service__about {
+  display: none;
   float: right;
   width: 620px;
   padding-top: 68px;
 }
 .service__about img {
   float: right;
-  margin-top: 23px;
+  /* margin-top: 23px;*/
 }
 .service__col1 {
   float: left;
@@ -1234,6 +1239,9 @@ body {
   z-index: 100;
   width: 468px;
   height: 261px;
+}
+.service__item--active .service__about {
+  display: block;
 }
 .information {
   margin: 83px 0;

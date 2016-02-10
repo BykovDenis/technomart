@@ -74,6 +74,21 @@ function slider(){
         
     });
     
+    // Работа с сервисами
+    
+    var btn_delivery = document.getElementById("btn_delivery");
+    var btn_guarantee = document.getElementById("btn_guarantee");
+    var btn_credit = document.getElementById("btn_credit");
+    
+    btn_guarantee.addEventListener("click", function(){
+       
+        btn_guarantee.classList.add("btn__service--active");
+        btn_delivery.classList.remove("btn__service--active");
+        btn_credit.classList.remove("btn__service--active");
+        
+    });    
+   
+    
     // Показать карту
     var map_show = document.getElementById("map_show");
     var map_close = document.getElementById("map_close");

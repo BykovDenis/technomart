@@ -236,12 +236,11 @@ html
                                 div.service__border
                                 ul                            
                                     li.service__item.service__item--active 
-                                        button.btn__service.btn__service--active Доставка
+                                        button(id="btn_delivery" type="button").btn__service.btn__service--active Доставка
                                     li.service__item 
-                                        button.btn__service Гарантия
+                                        button(id="btn_guarantee" type="button").btn__service Гарантия
                                     li.service__item 
-                                        button.btn__service Кредит
-
+                                        button(id="btn_credit" type="button").btn__service Кредит
                             div.service__about 
                                 div.service__col1
                                     h4 Доставка
@@ -251,8 +250,26 @@ html
                                         Ведь мы неплохо заработаем, <br> 
                                         поднимая его на ваш на этаж!
                                     img(src="img/img_delivery_car.png" width="468" height="261" alt="Доставка")
-                                
                                     
+                            div.service__about 
+                                div.service__col1
+                                    h4 Гарантии
+                                    p. 
+                                        Если купленный у нас товар поломается или заискрит, 
+                                        а также в случае пожара, спровоцированного его возгаранием,  
+                                        вы всегда можете быть уверены в нашей гарантии. 
+                                        Мы обменяем сгоревший товар на новый. <br>
+                                        Дом уж восстановите как-нибудь сами.
+                                    img(src="img/img_guarantee.png" width="389" height="283" alt="Гарантии") 
+                                    
+                            div.service__about 
+                                div.service__col1
+                                    h4 Кредит
+                                    p. 
+                                        Залезть в долговую яму стало проще! <br>
+                                        Кредитные консультанты придут вам на помощь.
+                                    button.btn-lnk.btn-lnk--credit Отправить заявку
+                                    img(src="img/img_credit.png" width="465" height="285" alt="Кредит")                                     
                div.information
                     div.information__layout.clearfix
                         div.information__col1
